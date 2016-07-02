@@ -1,0 +1,136 @@
+.mountains {
+  height: 350px;
+  width: 100%;
+  z-index: 1;
+}
+
+form {
+  margin: 0px;
+}
+
+.account-masthead .container,
+.navbar-static-top .container {
+  width: 100%;
+}
+
+.navbar-static-top .container hr {
+  margin: 0;
+  border: 1px solid #000000;
+}
+
+.masthead .btn-navbar {
+    background-color: #003647;
+    background-image: none;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    margin-top: 15px;
+    margin-right: 30px;
+}
+
+.masthead .section {
+  float: right;
+}
+
+.homepage [role=main] {
+  padding: 0;
+  background: white;
+}
+
+.search_div {
+  position: relative;
+}
+
+.search_field {
+  position: absolute;
+  width: 100px;
+  padding-top: 300px;
+  padding-left: 20px;
+  z-index: 2;
+}
+
+@media (min-width: 980px) {
+  .masthead .nav-collapse {
+    float: left;
+  }
+}
+
+.masthead .nav-collapse {
+  padding-top: 0px;
+}
+
+.row {
+  margin-left: 0px;
+}
+
+.btn-group-categories {
+  width: 100%;
+}
+
+.btn-categories {
+  position: relative;
+  padding: 0px;
+  width: 12.425%;
+  height: 60px;
+  padding-top: 50px;
+  color: #000000;
+}
+.btn-categories:hover {
+  background-position: 0px -110px;
+  background-color: #C8E5FB;
+}
+.btn-categories:focus {
+  background-color: #C8E5FB;
+}
+
+.about_div {
+  display: inline-block;
+  width: 75%;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.about_text {
+  border: 3px solid black;
+  padding-left: 3px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.about_and_data_circles {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.data_circles {
+  display: inline-block;
+  float: right;
+  margin-right: 70px;
+}
+
+.data_circle {
+  display: block;
+}
+
+.forecast_div {
+  display: block;
+  height: 300px;
+}
+
+.forecast {
+  display: inline-block;
+  padding-left: 75px;
+  width: 200px;
+  height: 200px;
+}
+
+.footer_logo {
+  padding-left: 20px;
+}
+
+.attribution {
+  text-align: right;
+  padding-top: 30px;
+}

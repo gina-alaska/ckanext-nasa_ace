@@ -1,0 +1,22 @@
+<footer class="site-footer">
+    {% block footer_content %}
+    <div class="row">
+      <div class="span8 footer-logo">
+        {% block footer_logo %}
+          <a href="/"><img src="base/images/ace_logo.png" /></a>
+        {% endblock %}
+      </div>
+      <div class="span9 attribution">
+        {% block footer_attribution %}
+          <h3 style="display: inline-block;">ACE Proudly Partners with </h3><img style="display: inline-block; padding-left: 5px; padding-bottom: 10px;" src="base/images/exact_earth.png" />
+        {% endblock %}
+      </div>
+    </div>
+    {% endblock %}
+
+  {% block footer_debug %}
+    {% if g.debug %}
+      {% include 'snippets/debug.html' %}
+    {% endif %}
+  {% endblock %}
+</footer>
