@@ -14,4 +14,5 @@ class Nasa_AcePlugin(plugins.SingletonPlugin):
 
     # IActions
     def get_actions(self):
-        return {'user_show': actions.user_show }
+        return {'user_show': actions.user_show, 
+                'user_create': actions.user_create }
