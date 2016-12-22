@@ -14,3 +14,6 @@ def user_update(context, data_dict=None):
 
 def user_delete(context, data_dict=None):
     return action.delete.user_delete(context, data_dict)
+
+def organization_create(context, data_dict=None):
+    return action.create.organization_create(context, data_dict)

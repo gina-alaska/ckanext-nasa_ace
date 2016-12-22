@@ -18,7 +18,8 @@ class Nasa_AcePlugin(plugins.SingletonPlugin):
         return {'user_show': actions.user_show,
                 'user_create': actions.user_create,
                 'user_update': actions.user_update,
-                'user_delete': actions.user_delete }
+                'user_delete': actions.user_delete,
+                'organization_create': actions.organization_create }
 
     # IAuthenticator
     # This requires that I define identify and login even if I don't use them.
@@ -34,4 +35,3 @@ class Nasa_AcePlugin(plugins.SingletonPlugin):
     # Set CC_DATA to 0 to logout the current user in CometChat.
     def logout(self):
         toolkit.response.set_cookie('cc_data', '0')
-

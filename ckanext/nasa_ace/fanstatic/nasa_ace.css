@@ -1071,3 +1071,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .navbar .nav {
   margin-right: 0;
 }
+
+.modal {
+  z-index: 1000001 !important;
+  margin-left: 0px;
+}
