@@ -17,3 +17,12 @@ def user_delete(context, data_dict=None):
 
 def organization_create(context, data_dict=None):
     return action.create.organization_create(context, data_dict)
+
+def organization_delete(context, data_dict=None):
+    return action.delete.organization_delete(context, data_dict)
+
+def group_create(context, data_dict=None):
+    return action.create.group_create(context, data_dict)
+
+def group_delete(context, data_dict=None):
+    return action.delete.group_delete(context, data_dict)

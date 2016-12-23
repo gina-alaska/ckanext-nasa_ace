@@ -19,7 +19,10 @@ class Nasa_AcePlugin(plugins.SingletonPlugin):
                 'user_create': actions.user_create,
                 'user_update': actions.user_update,
                 'user_delete': actions.user_delete,
-                'organization_create': actions.organization_create }
+                'organization_create': actions.organization_create,
+                'organization_delete': actions.organization_delete,
+                'group_create': actions.group_create,
+                'group_delete': actions.group_delete }
 
     # IAuthenticator
     # This requires that I define identify and login even if I don't use them.
