@@ -60,7 +60,7 @@ def organization_create(context, data_dict=None):
   metadata.create_all(mysql_engine)
   result = mysql_engine.execute("select userid from users where name='" + str(context['auth_user_obj'].name) + "'")
   for userid in result:
-    insert_chatroom = chatrooms.insert().values(name=str(context['group'].display_name),lastactivity=int(time.time()),createdby=int(userid['userid']),type=2)
+    insert_chatroom = chatrooms.insert().values(name="Org: " + str(context['group'].display_name),lastactivity=int(time.time()),createdby=int(userid['userid']),type=2)
     insert_result = connection.execute(insert_chatroom)
     insert_user = chatroom_users.insert().values(userid=int(userid['userid']), chatroomid=int(insert_result.lastrowid))
     connection.execute(insert_user)
@@ -74,7 +74,7 @@ def organization_delete(context, data_dict=None):
   chatrooms = Table('cometchat_chatrooms', metadata, Column('id', Integer), Column('name', String), Column('lastactivity', Integer), Column('createdby', Integer), Column('password', String), Column('type', Integer), Column('vidsession', String), Column('invitedusers', String),)
   chatroom_users = Table('cometchat_chatrooms_users', metadata, Column('userid', Integer), Column('chatroomid', Integer), Column('isbanned', Integer),)
   metadata.create_all(mysql_engine)
-  result = connection.execute('select id from cometchat_chatrooms where name="' + str(context['group'].display_name) + '"')
+  result = connection.execute('select id from cometchat_chatrooms where name="Org: ' + str(context['group'].display_name) + '"')
   for chatroom in result:
     delete_chatroom = chatrooms.delete().where(chatrooms.c.id == str(chatroom['id']))
     delete_chatroom_users = chatroom_users.delete().where(chatroom_users.c.chatroomid == str(chatroom['id']))
