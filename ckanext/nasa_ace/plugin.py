@@ -21,11 +21,15 @@ class Nasa_AcePlugin(plugins.SingletonPlugin):
                 'user_delete': actions.user_delete,
                 'organization_create': actions.organization_create,
                 'organization_delete': actions.organization_delete,
+                'organization_member_create': actions.organization_member_create,
+                'organization_member_delete': actions.organization_member_delete,
                 'group_create': actions.group_create,
-                'group_delete': actions.group_delete }
+                'group_delete': actions.group_delete,
+                'group_member_create': actions.group_member_create,
+                'group_member_delete': actions.group_member_delete }
 
     # IAuthenticator
-    # This requires that I define identify and login even if I don't use them.
+    # This requires that I define identify, login, and abort even if I don't use them.
     def identify(self):
         pass
 

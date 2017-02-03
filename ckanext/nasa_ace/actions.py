@@ -113,3 +113,77 @@ def group_delete(context, data_dict=None):
     connection.execute(delete_chatroom)
     connection.execute(delete_chatroom_users)
   return original_action
+
+def organization_member_create(context, data_dict=None):
+  original_action = action.create.organization_member_create(context, data_dict)
+  mysql_engine = create_engine(chat_connect(), pool_recycle=3600)
+  connection = mysql_engine.connect()
+  metadata = MetaData()
+  chatroom_users = Table('cometchat_chatrooms_users', metadata, Column('userid', Integer), Column('chatroomid', Integer), Column('isbanned', Integer),)
+  metadata.create_all(mysql_engine)
+  userid_result = mysql_engine.execute("select userid from users where name='" + str(data_dict['username']) + "'")
+  for userid in userid_result:
+    result = connection.execute('select id from cometchat_chatrooms where name="Org: ' + str(context['group'].name) + '"')
+    for chatroom in result:
+      chatroom_user_result = connection.execute('select userid from cometchat_chatrooms_users where chatroomid=' + str(chatroom['id']))
+      for user in chatroom_user_result:
+	if (user['userid'] == userid['userid']):
+          return original_action
+      insert_user = chatroom_users.insert().values(userid=int(userid['userid']), chatroomid=int(chatroom['id']))
+      connection.execute(insert_user)
+  return original_action
+
+def organization_member_delete(context, data_dict=None):
+  original_action = action.delete.organization_member_delete(context, data_dict)
+  model = context['model']
+  mysql_engine = create_engine(chat_connect(), pool_recycle=3600)
+  connection = mysql_engine.connect()
+  metadata = MetaData()
+  chatroom_users = Table('cometchat_chatrooms_users', metadata, Column('userid', Integer), Column('chatroomid', Integer), Column('isbanned', Integer),)
+  metadata.create_all(mysql_engine)
+  user = model.User.get(data_dict['user_id'])
+  group = model.Group.get(data_dict['id'])
+  member = mysql_engine.execute("select userid from users where name='" + str(user.name) + "'")
+  for userid in member:
+    chatroom = mysql_engine.execute("select id from cometchat_chatrooms where name='Org: " + str(group.name) + "'")
+    for chatroomid in chatroom:
+      delete_chatroom_user = chatroom_users.delete().where(and_(chatroom_users.c.userid == str(userid['userid']), chatroom_users.c.chatroomid == str(chatroomid['id'])))
+      connection.execute(delete_chatroom_user)
+  return original_action
+
+def group_member_create(context, data_dict=None):
+  original_action = action.create.group_member_create(context, data_dict)
+  mysql_engine = create_engine(chat_connect(), pool_recycle=3600)
+  connection = mysql_engine.connect()
+  metadata = MetaData()
+  chatroom_users = Table('cometchat_chatrooms_users', metadata, Column('userid', Integer), Column('chatroomid', Integer), Column('isbanned', Integer),)
+  metadata.create_all(mysql_engine)
+  userid_result = mysql_engine.execute("select userid from users where name='" + str(data_dict['username']) + "'")
+  for userid in userid_result:
+    result = connection.execute('select id from cometchat_chatrooms where name="Group: ' + str(context['group'].title) + '"')
+    for chatroom in result:
+      chatroom_user_result = connection.execute('select userid from cometchat_chatrooms_users where chatroomid=' + str(chatroom['id']))
+      for user in chatroom_user_result:
+	if (user['userid'] == userid['userid']):
+          return original_action
+      insert_user = chatroom_users.insert().values(userid=int(userid['userid']), chatroomid=int(chatroom['id']))
+      connection.execute(insert_user)
+  return original_action
+
+def group_member_delete(context, data_dict=None):
+  original_action = action.delete.group_member_delete(context, data_dict)
+  model = context['model']
+  mysql_engine = create_engine(chat_connect(), pool_recycle=3600)
+  connection = mysql_engine.connect()
+  metadata = MetaData()
+  chatroom_users = Table('cometchat_chatrooms_users', metadata, Column('userid', Integer), Column('chatroomid', Integer), Column('isbanned', Integer),)
+  metadata.create_all(mysql_engine)
+  user = model.User.get(data_dict['user_id'])
+  group = model.Group.get(data_dict['id'])
+  member = mysql_engine.execute("select userid from users where name='" + str(user.name) + "'")
+  for userid in member:
+    chatroom = mysql_engine.execute("select id from cometchat_chatrooms where name='Group: " + str(group.title) + "'")
+    for chatroomid in chatroom:
+      delete_chatroom_user = chatroom_users.delete().where(and_(chatroom_users.c.userid == str(userid['userid']), chatroom_users.c.chatroomid == str(chatroomid['id'])))
+      connection.execute(delete_chatroom_user)
+  return original_action
