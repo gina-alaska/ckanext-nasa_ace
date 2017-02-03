@@ -119,17 +119,22 @@ def organization_member_create(context, data_dict=None):
   mysql_engine = create_engine(chat_connect(), pool_recycle=3600)
   connection = mysql_engine.connect()
   metadata = MetaData()
+  chatrooms = Table('cometchat_chatrooms', metadata, Column('id', Integer), Column('name', String), Column('lastactivity', Integer), Column('createdby', Integer), Column('password', String), Column('type', Integer), Column('vidsession', String), Column('invitedusers', String),)
   chatroom_users = Table('cometchat_chatrooms_users', metadata, Column('userid', Integer), Column('chatroomid', Integer), Column('isbanned', Integer),)
   metadata.create_all(mysql_engine)
-  userid_result = mysql_engine.execute("select userid from users where name='" + str(data_dict['username']) + "'")
+  userid_result = connection.execute("select userid from users where name='" + str(data_dict['username']) + "'")
   for userid in userid_result:
-    result = connection.execute('select id from cometchat_chatrooms where name="Org: ' + str(context['group'].name) + '"')
-    for chatroom in result:
-      chatroom_user_result = connection.execute('select userid from cometchat_chatrooms_users where chatroomid=' + str(chatroom['id']))
+    for chatroom in connection.execute(select([chatrooms.c.id, chatrooms.c.invitedusers]).where(chatrooms.c.name == "Org: " + str(context['group'].title))):
+      chatroom_user_result = connection.execute('select userid from cometchat_chatrooms_users where chatroomid=' + str(chatroom[chatrooms.c.id]))
       for user in chatroom_user_result:
 	if (user['userid'] == userid['userid']):
           return original_action
-      insert_user = chatroom_users.insert().values(userid=int(userid['userid']), chatroomid=int(chatroom['id']))
+      insert_user = chatroom_users.insert().values(userid=int(userid['userid']), chatroomid=int(chatroom[chatrooms.c.id]))
+      if (chatroom[chatrooms.c.invitedusers] != None):
+        update_chatroom = chatrooms.update().where(chatrooms.c.id==chatroom[chatrooms.c.id]).values(invitedusers=str(chatroom[chatrooms.c.invitedusers])+"," + str(userid['userid']))
+      else:
+        update_chatroom = chatrooms.update().where(chatrooms.c.id==chatroom[chatrooms.c.id]).values(invitedusers=str(userid['userid']))
+      connection.execute(update_chatroom)
       connection.execute(insert_user)
   return original_action
 
@@ -139,16 +144,24 @@ def organization_member_delete(context, data_dict=None):
   mysql_engine = create_engine(chat_connect(), pool_recycle=3600)
   connection = mysql_engine.connect()
   metadata = MetaData()
+  chatrooms = Table('cometchat_chatrooms', metadata, Column('id', Integer), Column('name', String), Column('lastactivity', Integer), Column('createdby', Integer), Column('password', String), Column('type', Integer), Column('vidsession', String), Column('invitedusers', String),)
   chatroom_users = Table('cometchat_chatrooms_users', metadata, Column('userid', Integer), Column('chatroomid', Integer), Column('isbanned', Integer),)
   metadata.create_all(mysql_engine)
   user = model.User.get(data_dict['user_id'])
   group = model.Group.get(data_dict['id'])
   member = mysql_engine.execute("select userid from users where name='" + str(user.name) + "'")
   for userid in member:
-    chatroom = mysql_engine.execute("select id from cometchat_chatrooms where name='Org: " + str(group.name) + "'")
-    for chatroomid in chatroom:
-      delete_chatroom_user = chatroom_users.delete().where(and_(chatroom_users.c.userid == str(userid['userid']), chatroom_users.c.chatroomid == str(chatroomid['id'])))
+    for chatroomid in connection.execute(select([chatrooms.c.id, chatrooms.c.invitedusers]).where(chatrooms.c.name == "Org: " + str(group.title))):
+      delete_chatroom_user = chatroom_users.delete().where(and_(chatroom_users.c.userid == str(userid['userid']), chatroom_users.c.chatroomid == str(chatroomid[chatrooms.c.id])))
+      new_invitedusers = chatroomid[chatrooms.c.invitedusers].split(',')
+      try:
+        new_invitedusers.remove(str(userid['userid']))
+      except:
+        pass
+      new_invitedusers = ','.join(new_invitedusers)
+      update_chatroom = chatrooms.update().where(chatrooms.c.id==chatroomid[chatrooms.c.id]).values(invitedusers=str(new_invitedusers))
       connection.execute(delete_chatroom_user)
+      connection.execute(update_chatroom)
   return original_action
 
 def group_member_create(context, data_dict=None):
@@ -156,17 +169,22 @@ def group_member_create(context, data_dict=None):
   mysql_engine = create_engine(chat_connect(), pool_recycle=3600)
   connection = mysql_engine.connect()
   metadata = MetaData()
+  chatrooms = Table('cometchat_chatrooms', metadata, Column('id', Integer), Column('name', String), Column('lastactivity', Integer), Column('createdby', Integer), Column('password', String), Column('type', Integer), Column('vidsession', String), Column('invitedusers', String),)
   chatroom_users = Table('cometchat_chatrooms_users', metadata, Column('userid', Integer), Column('chatroomid', Integer), Column('isbanned', Integer),)
   metadata.create_all(mysql_engine)
   userid_result = mysql_engine.execute("select userid from users where name='" + str(data_dict['username']) + "'")
   for userid in userid_result:
-    result = connection.execute('select id from cometchat_chatrooms where name="Group: ' + str(context['group'].title) + '"')
-    for chatroom in result:
-      chatroom_user_result = connection.execute('select userid from cometchat_chatrooms_users where chatroomid=' + str(chatroom['id']))
+    for chatroom in connection.execute(select([chatrooms.c.id, chatrooms.c.invitedusers]).where(chatrooms.c.name == "Group: " + str(context['group'].title))):
+      chatroom_user_result = connection.execute('select userid from cometchat_chatrooms_users where chatroomid=' + str(chatroom[chatrooms.c.id]))
       for user in chatroom_user_result:
 	if (user['userid'] == userid['userid']):
           return original_action
-      insert_user = chatroom_users.insert().values(userid=int(userid['userid']), chatroomid=int(chatroom['id']))
+      insert_user = chatroom_users.insert().values(userid=int(userid['userid']), chatroomid=int(chatroom[chatrooms.c.id]))
+      if (chatroom[chatrooms.c.invitedusers] != None):
+        update_chatroom = chatrooms.update().where(chatrooms.c.id==chatroom[chatrooms.c.id]).values(invitedusers=str(chatroom[chatrooms.c.invitedusers])+"," + str(userid['userid']))
+      else:
+        update_chatroom = chatrooms.update().where(chatrooms.c.id==chatroom[chatrooms.c.id]).values(invitedusers=str(userid['userid']))
+      connection.execute(update_chatroom)
       connection.execute(insert_user)
   return original_action
 
@@ -176,14 +194,22 @@ def group_member_delete(context, data_dict=None):
   mysql_engine = create_engine(chat_connect(), pool_recycle=3600)
   connection = mysql_engine.connect()
   metadata = MetaData()
+  chatrooms = Table('cometchat_chatrooms', metadata, Column('id', Integer), Column('name', String), Column('lastactivity', Integer), Column('createdby', Integer), Column('password', String), Column('type', Integer), Column('vidsession', String), Column('invitedusers', String),)
   chatroom_users = Table('cometchat_chatrooms_users', metadata, Column('userid', Integer), Column('chatroomid', Integer), Column('isbanned', Integer),)
   metadata.create_all(mysql_engine)
   user = model.User.get(data_dict['user_id'])
   group = model.Group.get(data_dict['id'])
   member = mysql_engine.execute("select userid from users where name='" + str(user.name) + "'")
   for userid in member:
-    chatroom = mysql_engine.execute("select id from cometchat_chatrooms where name='Group: " + str(group.title) + "'")
-    for chatroomid in chatroom:
-      delete_chatroom_user = chatroom_users.delete().where(and_(chatroom_users.c.userid == str(userid['userid']), chatroom_users.c.chatroomid == str(chatroomid['id'])))
+    for chatroomid in connection.execute(select([chatrooms.c.id, chatrooms.c.invitedusers]).where(chatrooms.c.name == "Org: " + str(group.title))):
+      delete_chatroom_user = chatroom_users.delete().where(and_(chatroom_users.c.userid == str(userid['userid']), chatroom_users.c.chatroomid == str(chatroomid[chatrooms.c.id])))
+      new_invitedusers = chatroomid[chatrooms.c.invitedusers].split(',')
+      try:
+        new_invitedusers.remove(str(userid['userid']))
+      except:
+        pass
+      new_invitedusers = ','.join(new_invitedusers)
+      update_chatroom = chatrooms.update().where(chatrooms.c.id==chatroomid[chatrooms.c.id]).values(invitedusers=str(new_invitedusers))
       connection.execute(delete_chatroom_user)
+      connection.execute(update_chatroom)
   return original_action
