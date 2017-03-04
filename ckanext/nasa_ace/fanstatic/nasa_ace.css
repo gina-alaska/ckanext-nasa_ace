@@ -1,0 +1,1078 @@
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  background: #eee;
+}
+
+form {
+  margin: 0px;
+}
+
+.site-footer {
+  min-height: auto;
+  background: transparent;
+  padding: 0px;
+}
+
+.homepage [role=main] {
+  padding: 0;
+  background: white;
+}
+
+.search_div {
+  position: relative;
+}
+
+.search_field {
+  position: absolute;
+  width: 100px;
+  padding-top: 300px;
+  padding-left: 20px;
+  z-index: 2;
+}
+
+/* line 3974, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* line 3979, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav > li {
+  position: relative;
+  display: block;
+}
+
+/* line 3983, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+/* line 3988, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #eee;
+}
+
+/* line 3993, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav > li.disabled > a {
+  color: #777;
+}
+
+/* line 3996, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav > li.disabled > a:hover,
+.nav > li.disabled > a:focus {
+  color: #777;
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+/* line 4003, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: #eee;
+  border-color: #337ab7;
+}
+
+/* line 4009, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav .nav-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+/* line 4015, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav > li > a > img {
+  max-width: none;
+}
+
+/* line 4018, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 4021, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+
+/* line 4025, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 4031, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd;
+}
+
+/* line 4034, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+/* line 4043, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+
+/* line 4047, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs.nav-justified > li {
+  float: none;
+}
+
+/* line 4050, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* line 4054, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+
+@media (min-width: 768px) {
+  /* line 4059, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .nav-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+
+  /* line 4063, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .nav-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+/* line 4067, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+
+/* line 4071, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+  /* line 4077, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+
+  /* line 4081, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .nav-tabs.nav-justified > .active > a,
+  .nav-tabs.nav-justified > .active > a:hover,
+  .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+/* line 4087, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-pills > li {
+  float: left;
+}
+
+/* line 4090, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-pills > li > a {
+  border-radius: 4px;
+}
+
+/* line 4093, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-pills > li + li {
+  margin-left: 2px;
+}
+
+/* line 4096, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #337ab7;
+}
+
+/* line 4102, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-stacked > li {
+  float: none;
+}
+
+/* line 4105, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-stacked > li + li {
+  margin-top: 2px;
+  margin-left: 0;
+}
+
+/* line 4109, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-justified {
+  width: 100%;
+}
+
+/* line 4112, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-justified > li {
+  float: none;
+}
+
+/* line 4115, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* line 4119, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+
+@media (min-width: 768px) {
+  /* line 4124, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+
+  /* line 4128, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+/* line 4132, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs-justified {
+  border-bottom: 0;
+}
+
+/* line 4135, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+
+/* line 4139, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs-justified > .active > a,
+.nav-tabs-justified > .active > a:hover,
+.nav-tabs-justified > .active > a:focus {
+  border: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+  /* line 4145, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .nav-tabs-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+
+  /* line 4149, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .nav-tabs-justified > .active > a,
+  .nav-tabs-justified > .active > a:hover,
+  .nav-tabs-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+/* line 4155, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.tab-content > .tab-pane {
+  display: none;
+}
+
+/* line 4158, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.tab-content > .active {
+  display: block;
+}
+
+/* line 4161, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.nav-tabs .dropdown-menu {
+  margin-top: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 4166, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar {
+  position: relative;
+  min-height: auto;
+  /*margin-bottom: 20px;*/
+  border: 1px solid transparent;
+}
+
+@media (min-width: 768px) {
+  /* line 4173, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar {
+    border-radius: 4px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 4178, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-header {
+    float: left;
+  }
+}
+/* line 4182, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* line 4191, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-collapse.in {
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  /* line 4195, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-collapse {
+    width: auto;
+    border-top: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  /* line 4201, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+
+  /* line 4207, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+
+  /* line 4210, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-static-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/* line 4217, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-bottom .navbar-collapse {
+  max-height: 340px;
+}
+
+@media (max-device-width: 480px) and (orientation: landscape) {
+  /* line 4222, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    max-height: 200px;
+  }
+}
+/* line 4227, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.container > .navbar-header,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse,
+.container-fluid > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (min-width: 768px) {
+  /* line 4235, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .container > .navbar-header,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+/* line 4243, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-static-top {
+  z-index: 1000;
+  border-width: 0 0 1px;
+}
+
+@media (min-width: 768px) {
+  /* line 4248, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-static-top {
+    border-radius: 0;
+  }
+}
+/* line 4252, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+@media (min-width: 768px) {
+  /* line 4260, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    border-radius: 0;
+  }
+}
+/* line 4265, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+}
+
+/* line 4269, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-fixed-bottom {
+  bottom: 0;
+  margin-bottom: 0;
+  border-width: 1px 0 0;
+}
+
+/* line 4274, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-brand {
+  float: left;
+  /*height: 50px;*/
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* line 4281, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-brand:hover,
+.navbar-brand:focus {
+  text-decoration: none;
+}
+
+/* line 4285, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-brand > img {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  /* line 4289, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar > .container .navbar-brand,
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+  }
+}
+/* line 4294, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* line 4306, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-toggle:focus {
+  outline: 0;
+}
+
+/* line 4309, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+/* line 4315, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+  /* line 4319, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-toggle {
+    display: none;
+  }
+}
+/* line 4323, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-nav {
+  margin: 7.5px -15px;
+}
+
+/* line 4326, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+
+@media (max-width: 767px) {
+  /* line 4332, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  /* line 4342, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+
+  /* line 4346, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-nav .open .dropdown-menu > li > a {
+    line-height: 20px;
+  }
+
+  /* line 4349, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-image: none;
+  }
+}
+@media (min-width: 768px) {
+  /* line 4355, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+
+  /* line 4359, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-nav > li {
+    float: left;
+  }
+
+  /* line 4362, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+/* line 4367, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-form {
+  padding: 10px 15px;
+  margin-top: 8px;
+  margin-right: -15px;
+  margin-bottom: 8px;
+  margin-left: -15px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  /* line 4379, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  /* line 4384, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  /* line 4389, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .form-control-static {
+    display: inline-block;
+  }
+
+  /* line 4392, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+
+  /* line 4396, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .input-group .input-group-addon,
+  .navbar-form .input-group .input-group-btn,
+  .navbar-form .input-group .form-control {
+    width: auto;
+  }
+
+  /* line 4401, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .input-group > .form-control {
+    width: 100%;
+  }
+
+  /* line 4404, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  /* line 4408, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .radio,
+  .navbar-form .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  /* line 4415, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .radio label,
+  .navbar-form .checkbox label {
+    padding-left: 0;
+  }
+
+  /* line 4419, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .radio input[type="radio"],
+  .navbar-form .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+
+  /* line 4424, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+@media (max-width: 767px) {
+  /* line 4429, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .form-group {
+    margin-bottom: 5px;
+  }
+
+  /* line 4432, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form .form-group:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  /* line 4437, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-form {
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+/* line 4448, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 4453, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
+  margin-bottom: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 4460, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-btn {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* line 4464, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-btn.btn-sm {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 4468, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-btn.btn-xs {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+/* line 4472, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  /* line 4477, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-text {
+    float: left;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 4484, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-left {
+    float: left !important;
+  }
+
+  /* line 4487, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-right {
+    float: right !important;
+    margin-right: -15px;
+  }
+
+  /* line 4491, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-right ~ .navbar-right {
+    margin-right: 0;
+  }
+}
+/* line 4495, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+/* line 4499, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-brand {
+  color: #777;
+}
+
+/* line 4502, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+
+/* line 4507, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-text {
+  color: #777;
+}
+
+/* line 4510, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #777;
+}
+
+/* line 4513, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+}
+
+/* line 4518, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+/* line 4524, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+
+/* line 4530, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+
+/* line 4533, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ddd;
+}
+
+/* line 4537, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
+/* line 4540, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #e7e7e7;
+}
+
+/* line 4544, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+@media (max-width: 767px) {
+  /* line 4551, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+
+  /* line 4554, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+
+  /* line 4559, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+
+  /* line 4565, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+/* line 4572, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-link {
+  color: #777;
+}
+
+/* line 4575, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .navbar-link:hover {
+  color: #333;
+}
+
+/* line 4578, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .btn-link {
+  color: #777;
+}
+
+/* line 4581, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .btn-link:hover,
+.navbar-default .btn-link:focus {
+  color: #333;
+}
+
+/* line 4585, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-default .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-default .btn-link:hover,
+.navbar-default .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-default .btn-link:focus {
+  color: #ccc;
+}
+
+/* line 4591, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse {
+  background-color: #222;
+  border-color: #080808;
+}
+
+/* line 4595, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-brand {
+  color: #9d9d9d;
+}
+
+/* line 4598, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* line 4603, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-text {
+  color: #9d9d9d;
+}
+
+/* line 4606, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-nav > li > a {
+  color: #9d9d9d;
+}
+
+/* line 4609, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* line 4614, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #080808;
+}
+
+/* line 4620, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-nav > .disabled > a,
+.navbar-inverse .navbar-nav > .disabled > a:hover,
+.navbar-inverse .navbar-nav > .disabled > a:focus {
+  color: #444;
+  background-color: transparent;
+}
+
+/* line 4626, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-toggle {
+  border-color: #333;
+}
+
+/* line 4629, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #333;
+}
+
+/* line 4633, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+/* line 4636, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #101010;
+}
+
+/* line 4640, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #080808;
+}
+
+@media (max-width: 767px) {
+  /* line 4647, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #080808;
+  }
+
+  /* line 4650, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+    background-color: #080808;
+  }
+
+  /* line 4653, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: #9d9d9d;
+  }
+
+  /* line 4656, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+
+  /* line 4661, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #080808;
+  }
+
+  /* line 4667, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #444;
+    background-color: transparent;
+  }
+}
+/* line 4674, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-link {
+  color: #9d9d9d;
+}
+
+/* line 4677, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .navbar-link:hover {
+  color: #fff;
+}
+
+/* line 4680, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .btn-link {
+  color: #9d9d9d;
+}
+
+/* line 4683, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .btn-link:hover,
+.navbar-inverse .btn-link:focus {
+  color: #fff;
+}
+
+/* line 4687, /Users/wfisher/.gem/ruby/2.3.1/gems/rails-assets-bootstrap-3.3.7/app/assets/stylesheets/bootstrap/bootstrap.scss */
+.navbar-inverse .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-inverse .btn-link:hover,
+.navbar-inverse .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-inverse .btn-link:focus {
+  color: #444;
+}
+
+
+
+/* line 11, /Users/wfisher/gits/nasa-ace-web/app/assets/stylesheets/welcome.scss */
+.navbar.navbar-default {
+  background-color: #005d7a;
+  color: #fff;
+}
+/* line 15, /Users/wfisher/gits/nasa-ace-web/app/assets/stylesheets/welcome.scss */
+.navbar.navbar-default .navbar-brand {
+  color: #fff;
+}
+/* line 19, /Users/wfisher/gits/nasa-ace-web/app/assets/stylesheets/welcome.scss */
+.navbar.navbar-default .nav > li > a {
+  color: #fff;
+  border-bottom: 4px solid #005d7a;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+/* line 23, /Users/wfisher/gits/nasa-ace-web/app/assets/stylesheets/welcome.scss */
+.navbar.navbar-default .nav > li > a:hover {
+  border-bottom: 4px solid #fff;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar .nav {
+  margin-right: 0;
+}
+
+.modal {
+  z-index: 1000001 !important;
+  margin-left: 0px;
+}

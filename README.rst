@@ -69,7 +69,7 @@ To install ckanext-nasa_ace:
 
 4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
 
-     sudo service apache2 reload
+     sudo service apache2-ckan reload
 
 
 ---------------
