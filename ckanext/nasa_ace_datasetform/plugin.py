@@ -1,7 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
-
+from sqlalchemy.util import OrderedDict
 
 def create_dataset_types():
     user = toolkit.get_action('get_site_user')({'ignore_auth': True}, {})
@@ -31,8 +31,9 @@ class Nasa_AceDatasetPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm)
     plugins.implements(plugins.IDatasetForm)
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
-
+    plugins.implements(plugins.IFacets, inherit = True)    
     
+
     # IConfigurer
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
@@ -94,3 +95,16 @@ class Nasa_AceDatasetPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm)
 
     def get_helpers(self):
         return {'dataset_types': dataset_types}
+        
+    
+    def dataset_facets(self, facets_dict, package_type):
+        if package_type != 'dataset':
+            return facets_dict
+            
+        
+        new_facets = OrderedDict() 
+        new_facets['vocab_dataset_types'] = toolkit._('Dataset Types')
+        for f in facets_dict:
+            new_facets[f] = facets_dict[f]
+        return new_facets
+    
