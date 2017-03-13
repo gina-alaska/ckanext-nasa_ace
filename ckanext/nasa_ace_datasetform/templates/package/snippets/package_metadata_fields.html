@@ -1,0 +1,24 @@
+{% ckan_extends %}
+
+{# You could remove 'free extras' from the package form like this, but we keep them for this example's tests.
+  {% block custom_fields %}
+  {% endblock %}
+#}
+
+
+{% block package_metadata_fields %}
+
+  <div class="control-group">
+    <label class="control-label" for="field-dataset_type">{{ _("Dataset Type") }}</label>
+    <div class="controls">
+      <select id="field-dataset_type" name="dataset_type" data-module="autocomplete">
+        {% for dataset_type in h.dataset_types()  %}
+          <option value="{{ dataset_type }}" {% if dataset_type in data.get('dataset_type', []) %}selected="selected"{% endif %}>{{ dataset_type }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+
+  {{ super() }}
+
+{% endblock %}
