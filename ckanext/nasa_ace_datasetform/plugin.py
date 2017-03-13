@@ -56,17 +56,17 @@ class Nasa_AceDatasetPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm)
         return schema
 
     def create_package_schema(self):
-        schema = super(ExampleIDatasetFormPlugin, self).create_package_schema()
+        schema = super(Nasa_AceDatasetPlugin, self).create_package_schema()
         schema = self._modify_package_schema(schema)
         return schema
 
     def update_package_schema(self):
-        schema = super(ExampleIDatasetFormPlugin, self).update_package_schema()
+        schema = super(Nasa_AceDatasetPlugin, self).update_package_schema()
         schema = self._modify_package_schema(schema)
         return schema 
         
     def show_package_schema(self):
-        #~ schema = super(ExampleIDatasetFormPlugin, self).show_package_schema()
+        schema = super(Nasa_AceDatasetPlugin, self).show_package_schema()
         #~ schema.update({
             #~ 'custom_text': [toolkit.get_converter('convert_from_extras'),
                             #~ toolkit.get_validator('ignore_missing')]
