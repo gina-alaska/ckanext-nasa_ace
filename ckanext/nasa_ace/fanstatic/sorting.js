@@ -116,26 +116,26 @@
  
  
  function imageChange(sortType, key, sort) {
-        // TODO change to <i> tags
+
         if(sortType == 'alphaSort') {
-        
-            $('#' + key).parent().parent().find('img#sortFacetCount').attr('src', 'TODO: add plain # image')
+
+            $('#' + key).parent().parent().find('button#sortFacetCount').attr('src', '/fanstatic/datagovtheme/images/number.png')
 
             if(sort == 'desc')
-                $('#' + key).parent().parent().find('img#sortFacetAlpha').attr('src', 'TODO: add desc abc image');
+                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('src', '/fanstatic/datagovtheme/images/alpha_down.png');
             else
-                $('#' + key).parent().parent().find('img#sortFacetAlpha').attr('src', 'TODO: add asc abc image');
+                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('src', '/fanstatic/datagovtheme/images/alpha_up.png');
 
         }
 
         if(sortType == 'cntSort') {
 
-            $('#' + key).parent().parent().find('img#sortFacetAlpha').attr('src', 'TODO: add plain abc image');
+            $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('src', '/fanstatic/datagovtheme/images/alpha.png');
 
             if(sort == 'desc')
-                $('#' + key).parent().parent().find('img#sortFacetCount').attr('src', 'TODO: add desc # image');
+                $('#' + key).parent().parent().find('button#sortFacetCount').attr('src', '/fanstatic/datagovtheme/images/number_down.png');
             else
-                $('#' + key).parent().parent().find('img#sortFacetCount').attr('src', 'TODO: add asc # image');
+                $('#' + key).parent().parent().find('button#sortFacetCount').attr('src', '/fanstatic/datagovtheme/images/number_up.png');
         }
 
  }
@@ -172,17 +172,26 @@
         });    
             
     });
-    
-// TODO: add defaults for NASA types  
+   
  /**
   * for Alphabatical sort set param 'sortType' to alphaSort
   * for Count sort set param 'sortType' to cntSort
   * for sort order set param 'sort' to asc or desc
  **/
  var defaults = {
-      
+      'metadata_type' : {'sortType': 'cntSort', 'sort' : 'desc'},
       'tags' : {'sortType': 'cntSort', 'sort' : 'desc'},
-
+      'res_format' : {'sortType': 'cntSort', 'sort' : 'desc'},
+      'groups' : {'sortType': 'cntSort', 'sort' : 'desc'},
+      'organization_type' : {'sortType': 'cntSort', 'sort' : 'desc'},
+      'organization' : {'sortType': 'cntSort', 'sort' : 'desc'},
+      'vocab_category_all' : {'sortType': 'cntSort', 'sort' : 'desc'},
+      'dataset_type' : {'sortType': 'cntSort', 'sort' : 'desc'},
+      'harvest_source_title' : {'sortType': 'cntSort', 'sort' : 'desc'},
+      'frequency' : {'sortType': 'cntSort', 'sort' : 'desc'},
+      'source_type' : {'sortType': 'cntSort', 'sort' : 'desc'},
+      'publisher' : {'sortType': 'cntSort', 'sort' : 'desc'},
+      'bureauCode' : {'sortType': 'cntSort', 'sort' : 'desc'}
  };
  
  var allVars = $.getUrlVars();
@@ -238,9 +247,7 @@
     
  });
  
- 
- // TODO change to <i>tag stuff
- $("img#sortFacetAlpha").click(function() {
+ $("button#sortFacetAlpha").click(function() {
   	
   	 var id = $(this).parent().parent().find('ul.unstyled.nav.nav-simple.nav-facet').attr('id');
   	 var mylist = $('ul#' + id);
@@ -254,9 +261,9 @@
   	 
   	 changeURL(id, sort, 'alphaSort');
   	
- }); //end of img#sortFacetAlpha
+ }); //end of button#sortFacetAlpha
   
- $("img#sortFacetCount").click(function() {
+ $("button#sortFacetCount").click(function() {
   
      var id = $(this).parent().parent().find('ul.unstyled.nav.nav-simple.nav-facet').attr('id');
   	 var mylist = $('ul#' + id);
@@ -269,6 +276,6 @@
   	 mylist.sortList(sort, 'cntSort');
   	 changeURL(id, sort, 'cntSort');
   
- }); //end of img#sortFacetCount  
+ }); //end of button#sortFacetCount  
 
 })( jQuery );
