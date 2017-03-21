@@ -23,7 +23,7 @@ def workspace_msg (action, msg):
         msg["To"] = email
         
         #send messege
-        server = smtplib.SMTP('smtp.uaf.edu')
+        server = smtplib.SMTP(config.get('nasa_ace_actions.mailserver'))
         server.sendmail(email,email,msg.as_string())
         server.quit()
     
