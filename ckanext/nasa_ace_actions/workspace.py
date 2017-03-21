@@ -1,16 +1,31 @@
+import requests
 import ckan.plugins.toolkit as toolkit
+
 
 import smtplib
 from email.mime.text import MIMEText
 
-
-
+import pylons.config as config
 
 def workspace_msg (action, msg):
     """will send a message to the NASA ACE workspace thingy
     """
-    pass 
-    # message suff should go here 
+    url = config.get('nasa_ace_actions.workspase_url')
+    try:
+        response = requests.post(url, data = {'action':action})
+        response.raise_for_status()
+    except requests.exceptions.RequestException:
+        email = config.get('nasa_ace_actions.email')
+        #~ print email
+        msg = MIMEText("Error with user " + action + "for \n" + str(msg) )
+        msg['Subject'] = "NASA ACE worspace sync error: " + action 
+        msg["From"] = email
+        msg["To"] = email
+        
+        #send messege
+        server = smtplib.SMTP('smtp.uaf.edu')
+        server.sendmail(email,email,msg.as_string())
+        server.quit()
     
 
 
