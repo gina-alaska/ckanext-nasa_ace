@@ -11,8 +11,9 @@ def workspace_msg (action, msg):
     """will send a message to the NASA ACE workspace thingy
     """
     url = config.get('nasa_ace_actions.workspase_url')
+    msg['action'] = action
     try:
-        response = requests.post(url, data = {'action':action})
+        response = requests.post(url, data = msg)
         response.raise_for_status()
     except requests.exceptions.RequestException:
         email = config.get('nasa_ace_actions.email')
@@ -36,8 +37,9 @@ def user_create(context, data_dict=None, original_action=None):
         raise toolkit.ValidationError, "Original action not provideded"
     
     workspace_info = {
-        'id': original_action['id'],
+        #~ 'id': original_action['id'],
         'username': original_action['name'],
+        'name': original_action['display_name'],
         'email': original_action['email'],
         'apikey':original_action['apikey'],
     }
@@ -50,8 +52,9 @@ def user_update(context, data_dict=None, original_action=None):
         raise toolkit.ValidationError, "Original action not provideded"
         
     workspace_info = {
-        'id': original_action['id'],
+        #~ 'id': original_action['id'],
         'username': original_action['name'],
+        'name': original_action['display_name'],
         'email': original_action['email'],
         'apikey':original_action['apikey'],
     }
@@ -60,10 +63,11 @@ def user_update(context, data_dict=None, original_action=None):
 def user_delete(context, data_dict=None, original_action=None):
     """extra user update actions for connecting workspace
     """
-    #~ workspace_info = {
+    workspace_info = {
         #~ 'id': data_dict['id'],
-        #~ 'username': data_dict['name'],
-        #~ 'email': data_dict['email'],
-        #~ }
+        'username': data_dict['name'],
+        'name': odata_dict['display_name'],
+        'email': data_dict['email'],
+        }
         
-    workspace_msg('delete',  data_dict)
+    workspace_msg('delete',  workspace_info)
