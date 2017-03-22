@@ -119,23 +119,23 @@
 
         if(sortType == 'alphaSort') {
 
-            $('#' + key).parent().parent().find('button#sortFacetCount').attr('src', '/fanstatic/datagovtheme/images/number.png')
+            $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn icon-sort-by-order-alt');
 
             if(sort == 'desc')
-                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('src', '/fanstatic/datagovtheme/images/alpha_down.png');
+                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn active icon-sort-by-alphabet-alt');
             else
-                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('src', '/fanstatic/datagovtheme/images/alpha_up.png');
+                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn active icon-sort-by-alphabet');
 
         }
 
         if(sortType == 'cntSort') {
 
-            $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('src', '/fanstatic/datagovtheme/images/alpha.png');
+            $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn icon-sort-by-alphabet-alt');
 
             if(sort == 'desc')
-                $('#' + key).parent().parent().find('button#sortFacetCount').attr('src', '/fanstatic/datagovtheme/images/number_down.png');
+                $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn active icon-sort-by-order-alt');
             else
-                $('#' + key).parent().parent().find('button#sortFacetCount').attr('src', '/fanstatic/datagovtheme/images/number_up.png');
+                $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn active icon-sort-by-order');
         }
 
  }
