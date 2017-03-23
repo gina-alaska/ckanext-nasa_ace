@@ -52,14 +52,13 @@ hide_empty
           {% set title = 'Status' %}
           {% endif %}
 
-        <span>  {{ title }} &nbsp;
-	</span>	  
+        <span>  {{ title }} &nbsp; </span>	  
     
-    <div class="btn-group">  
+        <div class="btn-group">  
           <button class="btn " id="sortFacetAlpha"><i class="icon-sort-by-alphabet-alt"></i></button>
 		  <button class="btn active" id="sortFacetCount"><i class="icon-sort-by-order-alt"></i></button>
-    </div>
-          <a href="{{ h.remove_url_param(name, extras=extras, alternative_url=alternative_url) }}" class="action">{{ _('Clear All') }}</a>
+          <button class="btn "><a href="{{ h.remove_url_param(name, extras=extras, alternative_url=alternative_url) }}" class="action">{{ _('Clear All') }}</a></button>
+        </div>
       </h2>
 
       {% if items %}
