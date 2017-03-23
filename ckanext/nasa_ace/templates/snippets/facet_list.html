@@ -54,14 +54,11 @@ hide_empty
 
         <span>  {{ title }} &nbsp;
 	</span>	  
-<!--
+    
     <div class="btn-group">  
--->
-          <button class="btn icon-sort-by-alphabet-alt" id="sortFacetAlpha"></button>
-		  <button class="btn active icon-sort-by-order-alt" id="sortFacetCount"></button>
-<!--
+          <button class="btn " id="sortFacetAlpha"><i class="icon-sort-by-alphabet-alt"></i></button>
+		  <button class="btn active" id="sortFacetCount"><i class="icon-sort-by-order-alt"></i></button>
     </div>
--->
           <a href="{{ h.remove_url_param(name, extras=extras, alternative_url=alternative_url) }}" class="action">{{ _('Clear All') }}</a>
       </h2>
 

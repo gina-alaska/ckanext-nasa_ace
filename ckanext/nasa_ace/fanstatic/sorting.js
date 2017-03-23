@@ -119,23 +119,33 @@
 
         if(sortType == 'alphaSort') {
 
-            $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn icon-sort-by-order-alt');
+            $('#' + key).parent().parent().find('button#sortFacetCount').attr('class','btn' );
+            $('#' + key).parent().parent().find('button#sortFacetCount').html('<i class="icon-sort-by-order-alt"></i>');
 
-            if(sort == 'desc')
-                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn active icon-sort-by-alphabet-alt');
-            else
-                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn active icon-sort-by-alphabet');
-
+            if(sort == 'desc'){
+                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn active');
+                $('#' + key).parent().parent().find('button#sortFacetAlpha').html('<i class="icon-sort-by-alphabet-alt"></i>');
+            }   
+            else{
+                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn active');
+                $('#' + key).parent().parent().find('button#sortFacetAlpha').html('<i class="icon-sort-by-alphabet"></i>');
+            }
         }
 
         if(sortType == 'cntSort') {
 
-            $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn icon-sort-by-alphabet-alt');
+            $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn');
+            $('#' + key).parent().parent().find('button#sortFacetAlpha').html('<i class="icon-sort-by-alphabet-alt"></i>');
 
-            if(sort == 'desc')
-                $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn active icon-sort-by-order-alt');
-            else
-                $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn active icon-sort-by-order');
+            if(sort == 'desc'){
+                $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn active');
+                $('#' + key).parent().parent().find('button#sortFacetCount').html('<i class="icon-sort-by-order-alt"></i>');
+
+            }
+            else{
+                $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn active');
+                $('#' + key).parent().parent().find('button#sortFacetCount').html('<i class="icon-sort-by-order"></i>');
+            }
         }
 
  }
@@ -249,7 +259,7 @@
  
  $("button#sortFacetAlpha").click(function() {
   	
-  	 var id = $(this).parent().parent().find('ul.unstyled.nav.nav-simple.nav-facet').attr('id');
+  	 var id = $(this).parent().parent().parent().find('ul.unstyled.nav.nav-simple.nav-facet').attr('id');
   	 var mylist = $('ul#' + id);
   	
   	 if(mylist.hasClass('alph_asc')) 
@@ -265,7 +275,7 @@
   
  $("button#sortFacetCount").click(function() {
   
-     var id = $(this).parent().parent().find('ul.unstyled.nav.nav-simple.nav-facet').attr('id');
+     var id = $(this).parent().parent().parent().find('ul.unstyled.nav.nav-simple.nav-facet').attr('id');
   	 var mylist = $('ul#' + id);
   	
   	 if(mylist.hasClass('cnt_asc')) 
