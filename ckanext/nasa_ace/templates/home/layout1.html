@@ -1,0 +1,35 @@
+<div role="main" class="hero">
+    <div class="row row1">
+      <div class="search_div">
+        {% block search %}
+          {% snippet 'home/snippets/search.html' %}
+        {% endblock %}
+      </div>
+      <div class="category_div">
+      <!--<div class="span6 col2">-->
+        {% block categories %}
+          {% snippet 'home/snippets/categories.html' %}
+        {% endblock %}
+      </div>
+
+    <div class="about_and_data_circles">
+      {% block data_circles %}
+        <div class="data_circles">
+          {% snippet 'home/snippets/data_circles.html' %}
+        </div>
+      {% endblock %}
+      <div class="about_div">
+        {% block about_div %}
+          <h1 class="page-heading">{{ _('About') }}</h1>
+          <div class="about_text">
+            {% snippet 'home/snippets/about_text.html' %}
+          </div>
+          <div class="forecast_div">
+            {% block forecast_div %}
+              {% snippet 'home/snippets/forecast.html' %}
+            {% endblock %}
+      {% endblock %}
+      </div>
+    </div>
+  </div>
+</div>
