@@ -1,0 +1,72 @@
+# Translations template for ckanext-nasa_ace.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the ckanext-nasa_ace
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-nasa_ace 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-03-10 18:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: ckanext/nasa_ace/templates/header.html:12
+msgid "Sysadmin settings"
+msgstr ""
+
+#: ckanext/nasa_ace/templates/header.html:14
+msgid "Admin"
+msgstr ""
+
+#: ckanext/nasa_ace/templates/header.html:19
+msgid "View profile"
+msgstr ""
+
+#: ckanext/nasa_ace/templates/header.html:26
+#, python-format
+msgid "Dashboard (%(num)d new item)"
+msgid_plural "Dashboard (%(num)d new items)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ckanext/nasa_ace/templates/header.html:29
+msgid "Dashboard"
+msgstr ""
+
+#: ckanext/nasa_ace/templates/header.html:35
+msgid "Edit settings"
+msgstr ""
+
+#: ckanext/nasa_ace/templates/header.html:37
+msgid "Settings"
+msgstr ""
+
+#: ckanext/nasa_ace/templates/header.html:43
+#: ckanext/nasa_ace/templates/header.html:45
+msgid "Log out"
+msgstr ""
+
+#: ckanext/nasa_ace/templates/header.html:56
+msgid "Log in"
+msgstr ""
+
+#: ckanext/nasa_ace/templates/header.html:58
+msgid "Register"
+msgstr ""
+
+#: ckanext/nasa_ace/templates/home/index.html:4
+msgid "Home"
+msgstr ""
+
+#: ckanext/nasa_ace/templates/home/layout1.html:23
+msgid "About"
+msgstr ""
+
