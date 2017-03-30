@@ -1,7 +1,6 @@
 import ckan.plugins.toolkit as toolkit
 import ckan.logic.action as action
-#~ import ckanext.loopback.plugin as loopback
-#~ from config import chat_connect
+from config import chat_connect
 import time
 from sqlalchemy import *
 
@@ -419,5 +418,3 @@ def group_member_delete(context, data_dict=None, original_action = None):
                 values(invitedusers=str(new_invitedusers))
             connection.execute(delete_chatroom_user)
             connection.execute(update_chatroom)
-
-
