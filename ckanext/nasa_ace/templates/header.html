@@ -1,4 +1,32 @@
 {% block header_wrapper %}
+
+<div class="navbar navbar-default navbar-static-top masthead">
+  {% block header_debug %}
+    {% if g.debug and not g.debug_supress_header %}
+      <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
+    {% endif %}
+  {% endblock %}
+  <div class="container-fluid">
+    <button data-target="#navbar" data-toggle="collapse" class="collapsed navbar-toggle" type="button">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="http://ace.uaf.edu/" class="navbar-brand">Arctic Collaborative Environment</a>
+    <div id="#navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://ace.uaf.edu/">Home</a></li>
+        <li><a href="http://ace.uaf.edu/about">About</a></li>
+        <li><a href="/group">{{ _('Groups') }}</a></li>
+        <li><a href="/organization">{{ _('Organizations') }}</a></li>
+        <li><a href="/dataset">Catalog</a></li>
+        <li><a href="http://workspace.ace.uaf.edu/workspaces">Workspaces</a></li>
+        <li><a href="http://ace.uaf.edu/help">Help</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 {% block header_account %}
 <header class="account-masthead">
   <div class="container-fluid">
@@ -65,30 +93,4 @@
 </div>
 </header>
 {% endblock %}
-<div class="navbar navbar-default navbar-static-top masthead">
-  {% block header_debug %}
-    {% if g.debug and not g.debug_supress_header %}
-      <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
-    {% endif %}
-  {% endblock %}
-  <div class="container-fluid">
-    <button data-target="#navbar" data-toggle="collapse" class="collapsed navbar-toggle" type="button">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a href="http://ace.uaf.edu/" class="navbar-brand">Arctic Collaborative Environment</a>
-    <div id="#navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://ace.uaf.edu/">Home</a></li>
-        <li><a href="http://ace.uaf.edu/about">About</a></li>
-        <li><a href="/group">{{ _('Groups') }}</a></li>
-        <li><a href="/organization">{{ _('Organizations') }}</a></li>
-        <li><a href="/dataset">Catalog</a></li>
-        <li><a href="http://workspace.ace.uaf.edu/workspaces">Workspaces</a></li>
-        <li><a href="http://ace.uaf.edu/help">Help</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 {% endblock %}
