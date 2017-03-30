@@ -1,13 +1,15 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import actions
+from ckan.lib.plugins import DefaultTranslation
 
-class Nasa_AcePlugin(plugins.SingletonPlugin):
+class Nasa_AcePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IActions)
     plugins.implements(plugins.IAuthenticator)
     plugins.implements(plugins.IRoutes, inherit=True)
-   
+    plugins.implements(plugins.ITranslation)
+
     # IConfigurer
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')

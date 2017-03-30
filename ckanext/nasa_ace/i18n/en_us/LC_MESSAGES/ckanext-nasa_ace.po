@@ -1,0 +1,583 @@
+# English (United States) translations for ckanext-nasa_ace.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the ckanext-nasa_ace
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-nasa_ace 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-03-10 18:21+0000\n"
+"PO-Revision-Date: 2017-03-10 18:22+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en_US <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: ckan/controllers/feed.py:227 ckan/controllers/group.py:138
+#: ckan/controllers/group.py:225 ckan/controllers/group.py:401
+#: ckan/controllers/group.py:509 ckan/controllers/group.py:542
+#: ckan/controllers/group.py:572 ckan/controllers/group.py:583
+#: ckan/controllers/group.py:637 ckan/controllers/group.py:654
+#: ckan/controllers/group.py:706 ckan/controllers/group.py:738
+#: ckan/controllers/group.py:771 ckan/controllers/group.py:828
+#: ckan/controllers/group.py:925 ckan/controllers/package.py:1251
+#: ckan/controllers/package.py:1266 ckan/logic/action/create.py:1384
+msgid "Group not found"
+msgstr "User Group not found"
+
+#: ckan/controllers/group.py:140 ckan/controllers/group.py:586
+msgid "Incorrect group type"
+msgstr "Incorrect user group type"
+
+#: ckanext/nasa_ace/templates/header.html:85
+msgid "Groups"
+msgstr "User Groups"
+
+#: ckan/controllers/group.py:466
+msgid "Unauthorized to create a group"
+msgstr "Unauthorised to create a user group"
+
+#: ckan/controllers/group.py:620 ckan/controllers/group.py:635
+#, python-format
+msgid "Unauthorized to delete group %s"
+msgstr "Unauthorised to delete user group %s"
+
+#: ckan/controllers/group.py:628
+msgid "Group has been deleted."
+msgstr "User Group has been deleted."
+
+#: ckan/controllers/group.py:704
+#, python-format
+msgid "Unauthorized to add member to group %s"
+msgstr "Unauthorised to add member to user group %s"
+
+#: ckan/controllers/group.py:723 ckan/controllers/group.py:736
+#, python-format
+msgid "Unauthorized to delete group %s members"
+msgstr "Unauthorised to delete user group %s members"
+
+#: ckan/controllers/group.py:730
+msgid "Group member has been deleted."
+msgstr "User Group member has been deleted."
+
+#: ckan/controllers/group.py:778
+msgid "CKAN Group Revision History"
+msgstr "CKAN User Group Revision History"
+
+#: ckan/controllers/group.py:782
+msgid "Recent changes to CKAN Group: "
+msgstr "Recent changes to CKAN User Group: "
+
+#: ckan/lib/activity_streams.py:63
+msgid "{actor} updated the group {group}"
+msgstr "{actor} updated the user group {group}"
+
+#: ckan/lib/activity_streams.py:81
+msgid "{actor} deleted the group {group}"
+msgstr "{actor} deleted the user group {group}"
+
+#: ckan/lib/activity_streams.py:97
+msgid "{actor} created the group {group}"
+msgstr "{actor} created the user group {group}"
+
+#: ckan/lib/mailer.py:128 ckan/templates/home/snippets/stats.html:23
+msgid "group"
+msgstr "user group"
+
+#: ckan/logic/converters.py:171 ckan/logic/validators.py:243
+#: ckanext/stats/templates/ckanext/stats/index.html:113
+msgid "Group"
+msgstr "User Group"
+
+#: ckan/logic/validators.py:253
+msgid "That group name or ID does not exist."
+msgstr "That user group name or ID does not exist."
+
+#: ckan/logic/validators.py:409
+msgid "Group name already exists in database"
+msgstr "User Group name already exists in database"
+
+#: ckan/logic/action/create.py:792
+msgid "Trying to create an organization as a group"
+msgstr "Trying to create an data provider as a user group"
+
+#: ckan/logic/action/create.py:1465 ckan/logic/action/create.py:1473
+msgid "You must be logged in to follow a group."
+msgstr "You must be logged in to follow a user group."
+
+#: ckan/templates/user/dashboard.html:22
+#: ckan/templates/user/dashboard_groups.html:12
+msgid "My Groups"
+msgstr "My User Groups"
+
+#: ckan/logic/auth/create.py:31 ckan/logic/auth/update.py:45
+#, python-format
+msgid "User %s not authorized to edit these groups"
+msgstr "User %s not authorised to edit these user groups"
+
+#: ckan/logic/auth/create.py:119
+#, python-format
+msgid "User %s not authorized to create groups"
+msgstr "User %s not authorised to create user groups"
+
+#: ckan/logic/auth/create.py:191
+msgid "Group was not found."
+msgstr "User group was not found."
+
+#: ckan/logic/auth/create.py:219
+msgid "Valid API key needed to create a group"
+msgstr "Valid API key needed to create a user group"
+
+#: ckan/logic/auth/create.py:263 ckan/logic/auth/update.py:115
+#, python-format
+msgid "User %s not authorized to edit group %s"
+msgstr "User %s not authorised to edit user group %s"
+
+#: ckan/logic/auth/delete.py:82
+#, python-format
+msgid "User %s not authorized to delete groups"
+msgstr "User %s not authorised to delete user groups"
+
+#: ckan/logic/auth/get.py:176
+#, python-format
+msgid "User %s not authorized to read group %s"
+msgstr "User %s not authorised to read user group %s"
+
+#: ckan/logic/auth/update.py:145
+#, python-format
+msgid "User %s not authorized to change state of group %s"
+msgstr "User %s not authorised to change state of user group %s"
+
+#: ckan/logic/auth/update.py:162
+#, python-format
+msgid "User %s not authorized to edit permissions of group %s"
+msgstr "User %s not authorised to edit permissions of user group %s"
+
+#: ckan/logic/auth/update.py:271
+msgid "Valid API key needed to edit a group"
+msgstr "Valid API key needed to edit a user group"
+
+#: ckan/templates/group/base_form_page.html:7
+msgid "Add a Group"
+msgstr "Add a User Group"
+
+#: ckan/templates/group/base_form_page.html:11
+msgid "Group Form"
+msgstr "User Group Form"
+
+#: ckan/templates/group/confirm_delete.html:11
+msgid "Are you sure you want to delete group - {name}?"
+msgstr "Are you sure you want to delete user group - {name}?"
+
+#: ckan/templates/group/edit.html:12
+msgid "Edit Group"
+msgstr "Edit User Group"
+
+#: ckan/templates/group/index.html:13
+#: ckan/templates/user/dashboard_groups.html:7
+msgid "Add Group"
+msgstr "Add User Group"
+
+#: ckan/templates/group/index.html:20
+msgid "Search groups..."
+msgstr "Search user groups..."
+
+#: ckan/templates/group/index.html:29
+msgid "There are currently no groups for this site"
+msgstr "There are currently no user groups for this site"
+
+#: ckan/templates/group/member_new.html:81
+msgid ""
+" <p><strong>Admin:</strong> Can edit group information, as well as manage "
+"organization members.</p> <p><strong>Member:</strong> Can add/remove "
+"datasets from groups</p> "
+msgstr ""
+" <p><strong>Admin:</strong> Can edit group information, as well as manage "
+"data provider members.</p> <p><strong>Member:</strong> Can add/remove "
+"datasets from user groups</p> "
+
+
+#: ckan/templates/group/new.html:3 ckan/templates/group/new.html:5
+#: ckan/templates/group/new.html:7
+msgid "Create a Group"
+msgstr "Create a User Group"
+
+#: ckan/templates/group/new_group_form.html:17
+msgid "Update Group"
+msgstr "Update User Group"
+
+#: ckan/templates/group/new_group_form.html:19
+msgid "Create Group"
+msgstr "Create User Group"
+
+#: ckan/templates/group/snippets/feeds.html:3
+msgid "Datasets in group: {group}"
+msgstr "Datasets in user group: {group}"
+
+#: ckan/templates/group/snippets/group_form.html:10
+msgid "My Group"
+msgstr "My User Group"
+
+#: ckan/templates/group/snippets/group_form.html:18
+msgid "my-group"
+msgstr "my-user-group"
+
+#: ckan/templates/group/snippets/group_form.html:20
+msgid "A little information about my group..."
+msgstr "A little information about my user group..."
+
+#: ckan/templates/group/snippets/group_form.html:60
+msgid "Are you sure you want to delete this Group?"
+msgstr "Are you sure you want to delete this User Group?"
+
+#: ckan/templates/group/snippets/group_form.html:64
+msgid "Save Group"
+msgstr "Save User Group"
+
+#: ckan/templates/group/snippets/group_item.html:43
+msgid "Remove dataset from this group"
+msgstr "Remove dataset from this user group"
+
+#: ckan/templates/group/snippets/helper.html:4
+msgid "What are Groups?"
+msgstr "What are User Groups?"
+
+#: ckan/templates/group/snippets/helper.html:8
+msgid ""
+" You can use CKAN Groups to create and manage collections of datasets. This "
+"could be to catalogue datasets for a particular project or team, or on a "
+"particular theme, or as a very simple way to help people find and search "
+"your own published datasets. "
+msgstr ""
+" You can use CKAN User Groups to create and manage collections of datasets. This "
+"could be to catalogue datasets for a particular project or team, or on a "
+"particular theme, or as a very simple way to help people find and search "
+"your own published datasets. "
+
+#: ckan/templates/home/snippets/stats.html:23
+msgid "groups"
+msgstr "user groups"
+
+#: ckan/templates/package/group_list.html:14
+msgid "Associate this group with this dataset"
+msgstr "Associate this user group with this dataset"
+
+#: ckan/templates/package/group_list.html:14
+msgid "Add to group"
+msgstr "Add to user group"
+
+#: ckan/templates/package/group_list.html:23
+msgid "There are no groups associated with this dataset"
+msgstr "There are no user groups associated with this dataset"
+
+
+#: ckan/templates/snippets/search_result_text.html:21
+msgid "{number} group found for \"{query}\""
+msgid_plural "{number} groups found for \"{query}\""
+msgstr[0] "{number} user group found for \"{query}\""
+msgstr[1] "{number} user groups found for \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:22
+msgid "No groups found for \"{query}\""
+msgstr "No user groups found for \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:23
+msgid "{number} group found"
+msgid_plural "{number} user groups found"
+msgstr[0] "{number} user group found"
+msgstr[1] "{number} user groups found"
+
+#: ckan/templates/snippets/search_result_text.html:24
+msgid "No groups found"
+msgstr "No user groups found"
+
+#: ckan/templates/user/dashboard.html:22
+#: ckan/templates/user/dashboard_groups.html:12
+msgid "My Groups"
+msgstr "My User Groups"
+
+#: ckan/templates/user/dashboard_groups.html:20
+msgid "You are not a member of any groups."
+msgstr "You are not a member of any user groups."
+
+#: ckan/templates/user/new.html:28
+msgid "Create datasets, groups and other exciting things"
+msgstr "Create datasets, user groups and other exciting things"
+
+#: ckanext/example_theme/v10_custom_snippet/templates/snippets/example_theme_most_popular_groups.html:20
+#: ckanext/example_theme/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:19
+msgid "This group has no description"
+msgstr "This user group has no description"
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:7
+msgid "Group (Axis 1)"
+msgstr "User Group (Axis 1)"
+
+
+#: ckanext/stats/templates/ckanext/stats/index.html:108
+#: ckanext/stats/templates/ckanext/stats/index.html:182
+msgid "Largest Groups"
+msgstr "Largest User Groups"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:127
+msgid "No groups"
+msgstr "No user groups"
+
+
+#: ckan/controllers/feed.py:238 ckan/logic/action/create.py:1384
+msgid "Organization not found"
+msgstr "Data Provider not found"
+
+#: ckanext/nasa_ace/templates/header.html:86
+msgid "Organizations"
+msgstr "Data Providers"
+
+#: ckan/lib/activity_streams.py:66
+msgid "{actor} updated the organization {organization}"
+msgstr "{actor} updated the data provider {organization}"
+
+#: ckan/lib/activity_streams.py:84
+msgid "{actor} deleted the organization {organization}"
+msgstr "{actor} deleted the data provider {organization}"
+
+#: ckan/lib/activity_streams.py:100
+msgid "{actor} created the organization {organization}"
+msgstr "{actor} created the data provider {organization}"
+
+#: ckan/lib/mailer.py:127 ckan/templates/home/snippets/stats.html:17
+msgid "organization"
+msgstr "data provider"
+
+#: ckan/logic/validators.py:46
+msgid "Organization does not exist"
+msgstr "Data Provider does not exist"
+
+#: ckan/logic/validators.py:51
+msgid "You cannot add a dataset to this organization"
+msgstr "You cannot add a dataset to this data provider"
+
+#: ckan/logic/validators.py:740
+msgid "Datasets with no organization can't be private."
+msgstr "Datasets with no data provider can't be private."
+
+#: ckan/logic/action/update.py:1038
+msgid "Organization was not found."
+msgstr "Data Provider was not found."
+
+
+#: ckan/logic/auth/create.py:38
+#, python-format
+msgid "User %s not authorized to add dataset to this organization"
+msgstr "User %s not authorised to add dataset to this data provider"
+
+#: ckan/logic/auth/create.py:129
+#, python-format
+msgid "User %s not authorized to create organizations"
+msgstr "User %s not authorised to create data providers"
+
+#: ckan/logic/auth/delete.py:103
+#, python-format
+msgid "User %s not authorized to delete organizations"
+msgstr "User %s not authorised to delete data providers"
+
+#: ckan/logic/auth/delete.py:107
+#, python-format
+msgid "User %s not authorized to delete organization %s"
+msgstr "User %s not authorised to delete data providers %s"
+
+#: ckan/logic/auth/update.py:128
+#, python-format
+msgid "User %s not authorized to edit organization %s"
+msgstr "User %s not authorised to edit data providers %s"
+
+#: ckan/templates/home/snippets/stats.html:17
+msgid "organizations"
+msgstr "data providers"
+
+
+#: ckan/templates/organization/base_form_page.html:5
+msgid "Organization Form"
+msgstr "Data Provider Form"
+
+#: ckan/templates/organization/bulk_process.html:88
+msgid "This organization has no datasets associated to it"
+msgstr "This data provider has no datasets associated to it"
+
+#: ckan/templates/organization/confirm_delete.html:11
+msgid "Are you sure you want to delete organization - {name}?"
+msgstr "Are you sure you want to delete data provider - {name}?"
+
+#: ckan/templates/organization/edit.html:6
+#: ckan/templates/organization/snippets/info.html:13
+#: ckan/templates/organization/snippets/info.html:16
+msgid "Edit Organization"
+msgstr "Edit Data Provider"
+
+#: ckan/templates/organization/index.html:13
+#: ckan/templates/user/dashboard_organizations.html:7
+msgid "Add Organization"
+msgstr "Add Data Provider"
+
+#: ckan/templates/organization/index.html:20
+msgid "Search organizations..."
+msgstr "Search data providers..."
+
+#: ckan/templates/organization/index.html:29
+msgid "There are currently no organizations for this site"
+msgstr "There are currently no data providers for this site"
+
+#: ckan/templates/organization/member_new.html:82
+msgid ""
+" <p><strong>Admin:</strong> Can add/edit and delete datasets, as well as "
+"manage organization members.</p> <p><strong>Editor:</strong> Can add and "
+"edit datasets, but not manage organization members.</p> "
+"<p><strong>Member:</strong> Can view the organization's private datasets, "
+"but not add new datasets.</p> "
+msgstr ""
+" <p><strong>Admin:</strong> Can add/edit and delete datasets, as well as "
+"manage data provider members.</p> <p><strong>Editor:</strong> Can add and "
+"edit datasets, but not manage data provider members.</p> "
+"<p><strong>Member:</strong> Can view the data providers's private datasets, "
+"but not add new datasets.</p> "
+
+#: ckan/templates/organization/new.html:3
+#: ckan/templates/organization/new.html:5
+#: ckan/templates/organization/new.html:7
+#: ckan/templates/organization/new.html:12
+msgid "Create an Organization"
+msgstr "Create a Data Provider"
+
+#: ckan/templates/organization/new_organization_form.html:17
+msgid "Update Organization"
+msgstr "Update Provider"
+
+#: ckan/templates/organization/new_organization_form.html:19
+msgid "Create Organization"
+msgstr "Create Data Provider"
+
+
+#: ckan/templates/organization/snippets/feeds.html:3
+msgid "Datasets in organization: {group}"
+msgstr "Datasets in data provider: {group}"
+
+#: ckan/templates/organization/snippets/help.html:4
+#: ckan/templates/organization/snippets/helper.html:4
+msgid "What are Organizations?"
+msgstr "What are Data Providers?"
+
+#: ckan/templates/organization/snippets/help.html:7
+msgid ""
+" <p>Organizations act like publishing departments for datasets (for example,"
+" the Department of Health). This means that datasets can be published by and"
+" belong to a department instead of an individual user.</p> <p>Within "
+"organizations, admins can assign roles and authorise its members, giving "
+"individual users the right to publish datasets from that particular "
+"organisation (e.g. Office of National Statistics).</p> "
+msgstr ""
+" <p>Data Providers act like publishing departments for datasets (for example,"
+" the Department of Health). This means that datasets can be published by and"
+" belong to a department instead of an individual user.</p> <p>Within "
+"data providers, admins can assign roles and authorise its members, giving "
+"individual users the right to publish datasets from that particular "
+"data providers (e.g. Office of National Statistics).</p> "
+
+#: ckan/templates/organization/snippets/helper.html:8
+msgid ""
+" CKAN Organizations are used to create, manage and publish collections of "
+"datasets. Users can have different roles within an Organization, depending "
+"on their level of authorisation to create, edit and publish. "
+msgstr ""
+" CKAN Data Providers are used to create, manage and publish collections of "
+"datasets. Users can have different roles within an Data Provider, depending "
+"on their level of authorisation to create, edit and publish. "
+
+#: ckan/templates/organization/snippets/organization_form.html:10
+msgid "My Organization"
+msgstr "My Data Provider"
+
+#: ckan/templates/organization/snippets/organization_form.html:18
+msgid "my-organization"
+msgstr "my-data-provider"
+
+#: ckan/templates/organization/snippets/organization_form.html:20
+msgid "A little information about my organization..."
+msgstr "A little information about my Data Provider..."
+
+#: ckan/templates/organization/snippets/organization_form.html:60
+msgid ""
+"Are you sure you want to delete this Organization? This will delete all the "
+"public and private datasets belonging to this organization."
+msgstr ""
+"Are you sure you want to delete this Data Provider? This will delete all the "
+"public and private datasets belonging to this data provider."
+
+#: ckan/templates/organization/snippets/organization_form.html:64
+msgid "Save Organization"
+msgstr "Save Data Provider"
+
+#: ckan/templates/package/snippets/cannot_create_package.html:10
+msgid "Before you can create a dataset you need to create an organization."
+msgstr "Before you can create a dataset you need to create an data provider."
+
+#: ckan/templates/package/snippets/cannot_create_package.html:13
+msgid "Create a new organization"
+msgstr "Create a new data provider"
+
+#: ckan/templates/package/snippets/cannot_create_package.html:18
+msgid "There are no organizations to which you can assign this dataset."
+msgstr "There are no data providers to which you can assign this dataset."
+
+#: ckan/templates/package/snippets/cannot_create_package.html:19
+msgid ""
+"Ask a system administrator to create an organization before you can "
+"continue."
+msgstr ""
+"Ask a system administrator to create an data provider before you can "
+"continue."
+
+#: ckan/templates/package/snippets/package_basic_fields.html:70
+#: ckan/templates/snippets/organization.html:23
+msgid "Organization"
+msgstr "Data Provider"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:74
+msgid "No organization"
+msgstr "No data provider"
+
+#: ckan/templates/snippets/organization.html:48
+msgid "There is no description for this organization"
+msgstr "There is no description for this data provider"
+
+#: ckan/templates/snippets/search_result_text.html:27
+msgid "{number} organization found for \"{query}\""
+msgid_plural "{number} organizations found for \"{query}\""
+msgstr[0] "{number} data provider found for \"{query}\""
+msgstr[1] "{number} data providers found for \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:28
+msgid "No organizations found for \"{query}\""
+msgstr "No data providers found for \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:29
+msgid "{number} organization found"
+msgid_plural "{number} organizations found"
+msgstr[0] "{number} data provider found"
+msgstr[1] "{number} data providers found"
+
+#: ckan/templates/snippets/search_result_text.html:30
+msgid "No organizations found"
+msgstr "No data providers found"
+
+#: ckan/templates/user/dashboard.html:21
+#: ckan/templates/user/dashboard_organizations.html:12
+msgid "My Organizations"
+msgstr "My Data Providers"
+
+#: ckan/templates/user/dashboard_organizations.html:20
+msgid "You are not a member of any organizations."
+msgstr "You are not a member of any data providers."
