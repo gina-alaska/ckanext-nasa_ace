@@ -14,3 +14,10 @@
   {{ super() }}
   {% snippet 'snippets/cometchat-js.html' %}
 {% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+
+  {% resource 'nasa_ace/sorting.js' %}
+
+{% endblock %}
