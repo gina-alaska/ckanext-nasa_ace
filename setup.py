@@ -80,6 +80,7 @@ setup(
     entry_points='''
         [ckan.plugins]
         nasa_ace=ckanext.nasa_ace.plugin:Nasa_AcePlugin
+        nasa_ace_datasetform=ckanext.nasa_ace_datasetform.plugin:Nasa_AceDatasetPlugin
 	[babel.extractors]
 	ckan = ckan.lib.extract:extract_ckan
     ''',
