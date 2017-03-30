@@ -6,7 +6,8 @@ class Nasa_AcePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IActions)
     plugins.implements(plugins.IAuthenticator)
-
+    plugins.implements(plugins.IRoutes, inherit=True)
+   
     # IConfigurer
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
@@ -42,3 +43,9 @@ class Nasa_AcePlugin(plugins.SingletonPlugin):
     # Set CC_DATA to 0 to logout the current user in CometChat.
     def logout(self):
         toolkit.response.set_cookie('cc_data', '0')
+        
+    #IRoutes
+    def before_map(self, m):
+        """redirect index to dataset """
+        m.redirect('/', '/dataset')
+        return m
