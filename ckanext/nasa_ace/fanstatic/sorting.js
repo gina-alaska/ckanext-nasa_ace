@@ -119,31 +119,31 @@
 
         if(sortType == 'alphaSort') {
 
-            $('#' + key).parent().parent().find('button#sortFacetCount').attr('class','btn' );
+            $('#' + key).parent().parent().find('button#sortFacetCount').attr('class','btn btn-small' );
             $('#' + key).parent().parent().find('button#sortFacetCount').html('<i class="icon-sort-by-order-alt"></i>');
 
             if(sort == 'desc'){
-                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn active');
+                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn btn-small active');
                 $('#' + key).parent().parent().find('button#sortFacetAlpha').html('<i class="icon-sort-by-alphabet-alt"></i>');
             }   
             else{
-                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn active');
+                $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn btn-small active');
                 $('#' + key).parent().parent().find('button#sortFacetAlpha').html('<i class="icon-sort-by-alphabet"></i>');
             }
         }
 
         if(sortType == 'cntSort') {
 
-            $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn');
+            $('#' + key).parent().parent().find('button#sortFacetAlpha').attr('class', 'btn btn-small');
             $('#' + key).parent().parent().find('button#sortFacetAlpha').html('<i class="icon-sort-by-alphabet-alt"></i>');
 
             if(sort == 'desc'){
-                $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn active');
+                $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn btn-small active');
                 $('#' + key).parent().parent().find('button#sortFacetCount').html('<i class="icon-sort-by-order-alt"></i>');
 
             }
             else{
-                $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn active');
+                $('#' + key).parent().parent().find('button#sortFacetCount').attr('class', 'btn btn-small active');
                 $('#' + key).parent().parent().find('button#sortFacetCount').html('<i class="icon-sort-by-order"></i>');
             }
         }
