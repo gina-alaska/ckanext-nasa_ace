@@ -103,7 +103,8 @@ class Nasa_AceDatasetPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm)
             
         
         new_facets = OrderedDict() 
-        new_facets['vocab_dataset_types'] = toolkit._('Dataset Types')
+        ## called datasettypes in plugin but Categories where visiable
+        new_facets['vocab_dataset_types'] = toolkit._('Categories')
         for f in facets_dict:
             new_facets[f] = facets_dict[f]
         return new_facets

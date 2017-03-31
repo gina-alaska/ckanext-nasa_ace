@@ -9,7 +9,7 @@
 {% block package_metadata_fields %}
 
   <div class="control-group">
-    <label class="control-label" for="field-dataset_type">{{ _("Dataset Type") }}</label>
+    <label class="control-label" for="field-dataset_type">{{ _("Categories") }}</label>
     <div class="controls">
       <select id="field-dataset_type" name="dataset_type" data-module="autocomplete">
         {% for dataset_type in h.dataset_types()  %}
