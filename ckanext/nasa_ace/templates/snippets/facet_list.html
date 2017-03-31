@@ -56,10 +56,12 @@ hide_empty
 
         <span>  {{ title }} &nbsp; </span>	  
       </h2>
-        <div class="btn-group">  
-          <button class="btn active" id="sortFacetCount" ><i class="icon-sort-by-order-alt"></i></button>
-          <button class="btn " id="sortFacetAlpha" ><i class="icon-sort-by-alphabet-alt"></i></button>
-          <button onclick="location.href='{{ h.remove_url_param(name, extras=extras, alternative_url=alternative_url) }}'" class="btn " >{{ _('Clear All') }}</button>
+        <div class="btn btn-small-group">  
+          <button class="btn btn-small active" id="sortFacetCount" ><i class="icon-sort-by-order-alt"></i></button>
+          <button class="btn btn-small " id="sortFacetAlpha" ><i class="icon-sort-by-alphabet-alt"></i></button>
+<!--
+          <button onclick="location.href='{{ h.remove_url_param(name, extras=extras, alternative_url=alternative_url) }}'" class="btn btn-small " >{{ _('Clear All') }}</button>
+-->
 
         </div>
 
