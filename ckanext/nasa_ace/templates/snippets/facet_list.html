@@ -46,20 +46,28 @@ hide_empty
 
     <section class="{{ wrapper_class or 'module module-narrow module-shallow' }}">
       <h2 class="module-heading" id="sec-{{name}}">
+<!--
         <i class="icon-medium icon-filter"></i>
+-->
         {% set title = title or h.get_facet_title(name) %}
           {% if title == 'Progress' %}
           {% set title = 'Status' %}
           {% endif %}
 
         <span>  {{ title }} &nbsp; </span>	  
-    
-        <div class="btn-group">  
-          <button class="btn " id="sortFacetAlpha"><i class="icon-sort-by-alphabet-alt"></i></button>
-		  <button class="btn active" id="sortFacetCount"><i class="icon-sort-by-order-alt"></i></button>
-          <button class="btn "><a href="{{ h.remove_url_param(name, extras=extras, alternative_url=alternative_url) }}" class="action">{{ _('Clear All') }}</a></button>
-        </div>
       </h2>
+        <div class="btn-group">  
+          <button class="btn active" id="sortFacetCount" ><i class="icon-sort-by-order-alt"></i></button>
+          <button class="btn " id="sortFacetAlpha" ><i class="icon-sort-by-alphabet-alt"></i></button>
+          <button onclick="location.href='{{ h.remove_url_param(name, extras=extras, alternative_url=alternative_url) }}'" class="btn " >{{ _('Clear All') }}</button>
+
+        </div>
+
+        
+<!--
+       <a style="{float:right}" href="{{ h.remove_url_param(name, extras=extras, alternative_url=alternative_url) }}" class="action">{{ _('Clear All') }}</a>
+-->
+      
 
       {% if items %}
         <nav>
