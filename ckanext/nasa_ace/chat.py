@@ -26,10 +26,7 @@ def user_create(context, data_dict=None, original_action=None):
     mysql_engine = create_engine(chat_connect(), pool_recycle=3600)
     connection = mysql_engine.connect()
     metadata = MetaData()
-    users = Table('users',
-                  metadata,
-                  Column('userid', Integer),
-                  Column('name', String),)
+    users = Table('users', metadata, Column('userid', Integer), Column('name', String),)
     metadata.create_all(mysql_engine)
     userobj = context['user_obj']
     insert = users.insert().values(name=str(userobj.name))
@@ -48,7 +45,7 @@ def user_update(context, data_dict=None, original_action=None):
     users = Table('users',
                   metadata,
                   Column('userid', Integer),
-                  Column('name', String),)
+                  Column('name', String(50)),)
     metadata.create_all(mysql_engine)
     update = users.update().where(users.c.name == str(original_username)).\
         values(name=str(context['user_obj'].name))
@@ -67,7 +64,7 @@ def user_delete(context, data_dict=None):
     users = Table('users',
                   metadata,
                   Column('userid', Integer),
-                  Column('name', String),)
+                  Column('name', String(50)),)
     metadata.create_all(mysql_engine)
     delete = users.delete().where(users.c.name == str(delete_user.name))
     connection.execute(delete)
@@ -85,13 +82,13 @@ def organization_create(context, data_dict=None, original_action=None):
     chatrooms = Table('cometchat_chatrooms',
                       metadata,
                       Column('id', Integer),
-                      Column('name', String),
+                      Column('name', String(50)),
                       Column('lastactivity', Integer),
                       Column('createdby', Integer),
-                      Column('password', String),
+                      Column('password', String(50)),
                       Column('type', Integer),
-                      Column('vidsession', String),
-                      Column('invitedusers', String),)
+                      Column('vidsession', String(50)),
+                      Column('invitedusers', String(50)),)
     chatroom_users = Table('cometchat_chatrooms_users',
                            metadata,
                            Column('userid', Integer),
@@ -122,13 +119,13 @@ def organization_delete(context, data_dict=None, original_action=None):
     chatrooms = Table('cometchat_chatrooms',
                       metadata,
                       Column('id', Integer),
-                      Column('name', String),
+                      Column('name', String(50)),
                       Column('lastactivity', Integer),
                       Column('createdby', Integer),
-                      Column('password', String),
+                      Column('password', String(50)),
                       Column('type', Integer),
-                      Column('vidsession', String),
-                      Column('invitedusers', String),)
+                      Column('vidsession', String(50)),
+                      Column('invitedusers', String(50)),)
     chatroom_users = Table('cometchat_chatrooms_users',
                            metadata,
                            Column('userid', Integer),
@@ -157,13 +154,13 @@ def organization_member_create(context, data_dict=None, original_action=None):
     chatrooms = Table('cometchat_chatrooms',
                       metadata,
                       Column('id', Integer),
-                      Column('name', String),
+                      Column('name', String(50)),
                       Column('lastactivity', Integer),
                       Column('createdby', Integer),
-                      Column('password', String),
+                      Column('password', String(50)),
                       Column('type', Integer),
-                      Column('vidsession', String),
-                      Column('invitedusers', String),)
+                      Column('vidsession', String(50)),
+                      Column('invitedusers', String(50)),)
     chatroom_users = Table('cometchat_chatrooms_users',
                            metadata,
                            Column('userid', Integer),
@@ -210,13 +207,13 @@ def organization_member_delete(context, data_dict=None, original_action=None):
     chatrooms = Table('cometchat_chatrooms',
                        metadata,
                        Column('id', Integer),
-                       Column('name', String),
+                       Column('name', String(50)),
                        Column('lastactivity', Integer),
                        Column('createdby', Integer),
-                       Column('password', String),
+                       Column('password', String(50)),
                        Column('type', Integer),
-                       Column('vidsession', String),
-                       Column('invitedusers', String),)
+                       Column('vidsession', String(50)),
+                       Column('invitedusers', String(50)),)
     chatroom_users = Table('cometchat_chatrooms_users',
                         metadata,
                         Column('userid', Integer),
@@ -261,13 +258,13 @@ def group_create(context, data_dict=None, original_action = None):
     chatrooms = Table('cometchat_chatrooms',
                       metadata,
                       Column('id', Integer),
-                      Column('name', String),
+                      Column('name', String(50)),
                       Column('lastactivity', Integer),
                       Column('createdby', Integer),
-                      Column('password', String),
+                      Column('password', String(50)),
                       Column('type', Integer),
-                      Column('vidsession', String),
-                      Column('invitedusers', String),)
+                      Column('vidsession', String(50)),
+                      Column('invitedusers', String(50)),)
     chatroom_users = Table('cometchat_chatrooms_users',
                             metadata,
                             Column('userid', Integer),
@@ -298,13 +295,13 @@ def group_delete(context, data_dict=None, original_action = None):
     chatrooms = Table('cometchat_chatrooms',
                       metadata,
                       Column('id', Integer),
-                      Column('name', String),
+                      Column('name', String(50)),
                       Column('lastactivity', Integer),
                       Column('createdby', Integer),
-                      Column('password', String),
+                      Column('password', String(50)),
                       Column('type', Integer),
-                      Column('vidsession', String),
-                       Column('invitedusers', String),)
+                      Column('vidsession', String(50)),
+                       Column('invitedusers', String(50)),)
     chatroom_users = Table('cometchat_chatrooms_users',
                            metadata,
                            Column('userid', Integer),
@@ -333,13 +330,13 @@ def group_member_create(context, data_dict=None, original_action = None):
     chatrooms = Table('cometchat_chatrooms',
                       metadata,
                       Column('id', Integer),
-                      Column('name', String),
+                      Column('name', String(50)),
                       Column('lastactivity', Integer),
                       Column('createdby', Integer),
-                      Column('password', String),
+                      Column('password', String(50)),
                       Column('type', Integer),
-                      Column('vidsession', String),
-                      Column('invitedusers', String),)
+                      Column('vidsession', String(50)),
+                      Column('invitedusers', String(50)),)
     chatroom_users = Table('cometchat_chatrooms_users',
                             metadata,
                             Column('userid', Integer),
@@ -385,11 +382,11 @@ def group_member_delete(context, data_dict=None, original_action = None):
     chatrooms = Table('cometchat_chatrooms',
                     metadata,
                     Column('id', Integer),
-                    Column('name', String),
+                    Column('name', String(50)),
                     Column('lastactivity', Integer),
-                    Column('createdby', Integer), Column('password', String),
-                    Column('type', Integer), Column('vidsession', String),
-                    Column('invitedusers', String),)
+                    Column('createdby', Integer), Column('password', String(50)),
+                    Column('type', Integer), Column('vidsession', String(50)),
+                    Column('invitedusers', String(50)),)
     chatroom_users = Table('cometchat_chatrooms_users',
                             metadata, Column('userid', Integer),
                             Column('chatroomid', Integer),
