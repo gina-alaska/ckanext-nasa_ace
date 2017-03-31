@@ -28,7 +28,7 @@ def dataset_types():
     except toolkit.ObjectNotFound:
         return None
 
-class Nasa_AcePlugin(plugins.SingletonPlugin, DefaultTranslation):
+class Nasa_AcePlugin(plugins.SingletonPlugin, DefaultTranslation, toolkit.DefaultDatasetForm):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IAuthenticator)
     plugins.implements(plugins.IRoutes, inherit=True)
