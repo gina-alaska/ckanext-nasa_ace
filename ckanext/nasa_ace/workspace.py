@@ -10,13 +10,13 @@ import pylons.config as config
 def workspace_msg (action, msg):
     """will send a message to the NASA ACE workspace thingy
     """
-    url = config.get('nasa_ace.workspase_url')
+    url = config.get('ckan.nasa_ace.workspase_url')
     msg['action'] = action
     try:
         response = requests.post(url, data = msg)
         response.raise_for_status()
     except requests.exceptions.RequestException:
-        email = config.get('nasa_ace_actions.email')
+        email = config.get('ckan.nasa_ace.email')
         #~ print email
         msg = MIMEText("Error with user " + action + "for \n" + str(msg) )
         msg['Subject'] = "NASA ACE worspace sync error: " + action
@@ -24,7 +24,7 @@ def workspace_msg (action, msg):
         msg["To"] = email
 
         #send messege
-        server = smtplib.SMTP(config.get('nasa_ace.mailserver'))
+        server = smtplib.SMTP(config.get('ckan.nasa_ace.mailserver'))
         server.sendmail(email,email,msg.as_string())
         server.quit()
 
