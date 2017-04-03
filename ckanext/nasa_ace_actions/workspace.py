@@ -63,11 +63,13 @@ def user_update(context, data_dict=None, original_action=None):
 def user_delete(context, data_dict=None, original_action=None):
     """extra user update actions for connecting workspace
     """
+    user_show = toolkit.get_action('user_show')
+    user = user_show(context, data_dict)
     workspace_info = {
         #~ 'id': data_dict['id'],
-        'username': data_dict['name'],
-        'name': odata_dict['display_name'],
-        'email': data_dict['email'],
+        'username': user['name'],
+        'name': user['display_name'],
+        'email': user['email'],
         }
         
     workspace_msg('delete',  workspace_info)
