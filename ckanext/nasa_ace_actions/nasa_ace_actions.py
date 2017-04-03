@@ -9,44 +9,44 @@ DEV = pylons.config.get('nasa_ace_actions.actions_dev')
 
 ## setup for original and extra actions
 original_user_create = toolkit.get_action('user_create')
-extra_user_create = [workspace] if DEV else [loopback, chat, workspace]
+extra_user_create = [workspace] if DEV == "True" else [loopback, chat, workspace]
 
 original_user_update = toolkit.get_action('user_update')
-extra_user_update= [workspace] if DEV else [loopback, chat, workspace]
+extra_user_update= [workspace] if DEV == "True" else [loopback, chat, workspace]
 
 original_user_delete = toolkit.get_action('user_delete')
-extra_user_delete = [workspace] if DEV else [chat, workspace]
+extra_user_delete = [workspace] if DEV == "True" else [chat, workspace]
 
 original_user_show = toolkit.get_action('user_show')
-extra_user_show = [] if DEV else [chat]
+extra_user_show = [] if DEV == "True" else [chat]
 
 original_organization_create = toolkit.get_action('organization_create')
-extra_organization_create = [] if DEV else [loopback, chat]
+extra_organization_create = [] if DEV == "True" else [loopback, chat]
 
 original_organization_delete = toolkit.get_action('organization_delete')
-extra_organization_delete = [] if DEV else [loopback, chat]
+extra_organization_delete = [] if DEV == "True" else [loopback, chat]
 
 original_organization_member_create = \
     toolkit.get_action('organization_member_create')
-extra_organization_member_create = [] if DEV else [loopback, chat]
+extra_organization_member_create = [] if DEV == "True" else [loopback, chat]
 
 original_organization_member_delete= \
     toolkit.get_action('organization_member_delete')
-extra_organization_member_delete = [] if DEV else [loopback, chat]
+extra_organization_member_delete = [] if DEV == "True" else [loopback, chat]
 
 original_group_create = toolkit.get_action('group_create')
-extra_group_create = [] if DEV else [chat]
+extra_group_create = [] if DEV == "True" else [chat]
 
 original_group_delete = toolkit.get_action('group_delete')
-extra_group_delete = [] if DEV else [chat]
+extra_group_delete = [] if DEV == "True" else [chat]
 
 original_group_member_create = \
     toolkit.get_action('group_member_create')
-extra_group_member_create = [] if DEV else [chat]
+extra_group_member_create = [] if DEV == "True" else [chat]
 
 original_group_member_delete= \
     toolkit.get_action('group_member_delete')
-extra_group_member_delete = [] if DEV else [chat]
+extra_group_member_delete = [] if DEV == "True" else [chat]
 
 ## USER_action
 def nasa_ace_user_create(context, data_dict=None):
