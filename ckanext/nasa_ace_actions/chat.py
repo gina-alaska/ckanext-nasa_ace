@@ -1,7 +1,6 @@
 import ckan.plugins.toolkit as toolkit
 import ckan.logic.action as action
-#~ import ckanext.loopback.plugin as loopback
-#~ from config import chat_connect
+from config import chat_connect
 import time
 from sqlalchemy import *
 
@@ -16,12 +15,10 @@ def user_show(context, data_dict=None):
         "select userid from users where name='" + str(context['user']) + "'")
     for row in result:
         toolkit.response.set_cookie('cc_data', str(row['userid']))
-    #~ return action.get.user_show(context, data_dict)
 
 def user_create(context, data_dict=None, original_action=None):
     """extra create user actions for connecting chat
     """
-    #~ original_action = loopback.user_create(context,data_dict)
     if original_action is None:
         raise toolkit.ValidationError, "Original action not provideded"
     mysql_engine = create_engine(chat_connect(), pool_recycle=3600)
@@ -35,7 +32,6 @@ def user_create(context, data_dict=None, original_action=None):
     userobj = context['user_obj']
     insert = users.insert().values(name=str(userobj.name))
     result = connection.execute(insert)
-    #~ return original_action
 
 def user_update(context, data_dict=None, original_action=None):
     """extra user update actions for connecting chat
@@ -54,7 +50,6 @@ def user_update(context, data_dict=None, original_action=None):
     update = users.update().where(users.c.name == str(original_username)).\
         values(name=str(context['user_obj'].name))
     connection.execute(update)
-    #~ return original_action
 
 def user_delete(context, data_dict=None):
     """extra user delete actions for connecting chat
@@ -74,7 +69,7 @@ def user_delete(context, data_dict=None):
     connection.execute(delete)
 
 
-## ORGANIZATION ations
+## ORGANIZATION actions
 def organization_create(context, data_dict=None, original_action=None):
     """extra organization_create for connection chat
     """
