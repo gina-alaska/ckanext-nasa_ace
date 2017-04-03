@@ -11,7 +11,7 @@ class Nasa_AceActions(plugins.SingletonPlugin):
     """
     plugins.implements(plugins.IActions, inherit = True)
     plugins.implements(plugins.IAuthenticator)
-    
+
 
     def get_actions(self):
         """defines actions to extend
@@ -23,9 +23,9 @@ class Nasa_AceActions(plugins.SingletonPlugin):
             'user_delete': naa.nasa_ace_user_delete,
             'organization_create': naa.nasa_ace_organization_create,
             'organization_delete': naa.nasa_ace_organization_delete,
-            'organization_member_create': 
+            'organization_member_create':
                 naa.nasa_ace_organization_member_create,
-            'organization_member_delete': 
+            'organization_member_delete':
                 naa.nasa_ace_organization_member_delete,
             'group_create': naa.nasa_ace_group_create,
             'group_delete': naa.nasa_ace_group_delete,
@@ -33,7 +33,7 @@ class Nasa_AceActions(plugins.SingletonPlugin):
             'group_member_delete': naa.nasa_ace_group_member_delete,}
 
     # IAuthenticator
-    # This requires that I define identify, login, and abort even if 
+    # This requires that I define identify, login, and abort even if
     # I don't use them.
     def identify(self):
         pass
@@ -46,6 +46,4 @@ class Nasa_AceActions(plugins.SingletonPlugin):
 
     # Set CC_DATA to 0 to logout the current user in CometChat.
     def logout(self):
-        pass
-        #~ toolkit.response.set_cookie('cc_data', '0')
-
+        toolkit.response.set_cookie('cc_data', '0')
