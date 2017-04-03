@@ -40,6 +40,44 @@ padding: 0;
 }
 
 
+/* footer */
+
+.site-footer {
+  padding: 20px;
+  background: #005d7a url("/images/bg.png");
+  color: #000;
+  font-size: 20px; 
+ }
+
+  .site-footer .footer-wrapper {
+    height: 200px;
+    width: 700px;
+    margin: auto;
+  }
+
+  .site-footer p {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    margin: 20px 40px;
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    top: 35%; }
+
+  .site-footer .ace-logo {
+    height: auto;
+    width: auto; 
+    max-width: 200px; 
+    max-height: 200px; }
+
+  .site-footer .site-cookie {
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center; 
+    font-size: 14px; }
+
+
 
 
 html {
@@ -56,11 +94,13 @@ form {
   margin: 0px;
 }
 
+/* old footer
 .site-footer {
   min-height: auto;
   background: transparent;
   padding: 0px;
 }
+*/
 
 .homepage [role=main] {
   padding: 0;
