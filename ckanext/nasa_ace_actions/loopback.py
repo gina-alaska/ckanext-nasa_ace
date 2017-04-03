@@ -34,8 +34,8 @@ def loopback_login():
     pylons.config['loopback_token'] = json.loads(response.text)['id']
     log.debug('Logged into LoopBack with access token: {}'
         .format(pylons.config.get('loopback_token')))
-        
-        
+
+
 def loopback_user_update(user_id, user_info):
     """update user actions for loopback
     """
@@ -83,6 +83,7 @@ def user_create(context, data_dict=None, original_action=None):
         'id': original_action['id'],
         'username': original_action['name'],
         'email': original_action['email'],
+        'apikey': original_action['id'],
         'password': toolkit.get_or_bust(data_dict,'password1'),
     }
     if pylons.config.get('loopback_token') is None:
@@ -105,7 +106,7 @@ def user_update(context, data_dict=None, original_action=None):
     """
     if original_action is None:
         raise toolkit.ValidationError, "Original action not provideded"
-    
+
     user_id = original_action['id']
     user_info = {
         'username': original_action['name'],
@@ -145,4 +146,3 @@ def organization_member_delete(context, data_dict=None, original_action=None):
     }
 
     loopback_user_update(data_dict['user_id'], loopback_user_info)
-
