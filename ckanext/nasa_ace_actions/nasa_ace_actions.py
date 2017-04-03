@@ -92,7 +92,7 @@ def nasa_ace_organization_delete(context, data_dict=None):
     """organization_create with extra actions for NASA ACE
     """
     for extra_actions in extra_organization_delete:
-        extra_actions.organization_delete(context, data_dict, original_action)
+        extra_actions.organization_delete(context, data_dict)
     return original_organization_delete(context, data_dict)
 
 
@@ -110,9 +110,8 @@ def nasa_ace_organization_member_delete(context, data_dict=None):
     """organization_create with extra actions for NASA ACE
     """
     for extra_actions in extra_organization_member_delete:
-        extra_actions.organization_mamber_delete(context,
-                                                 data_dict,
-                                                 original_action)
+        extra_actions.organization_member_delete(context,
+                                                 data_dict)
     return original_organization_member_delete(context, data_dict)
 
 
@@ -129,7 +128,7 @@ def nasa_ace_group_delete(context, data_dict=None):
     """group_create with extra actions for NASA ACE
     """
     for extra_actions in extra_group_delete:
-        extra_actions.group_delete(context, data_dict, original_action)
+        extra_actions.group_delete(context, data_dict)
     return original_group_delete(context, data_dict)
 
 
@@ -147,7 +146,5 @@ def nasa_ace_group_member_delete(context, data_dict=None):
     """group_create with extra actions for NASA ACE
     """
     for extra_actions in extra_group_member_delete:
-        extra_actions.group_mamber_delete(context,
-                                                 data_dict,
-                                                 original_action)
+        extra_actions.group_member_delete(context, data_dict)
     return original_group_member_delete(context, data_dict)
