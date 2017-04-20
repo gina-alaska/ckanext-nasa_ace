@@ -12,7 +12,7 @@ def create_dataset_types():
     except toolkit.ObjectNotFound:
         data = {'name': 'dataset_types'}
         vocab = toolkit.get_action('vocabulary_create')(context, data)
-        for tag in (u'Weather', u'Oceans', u'Sea Ice', u'Snow', u'Terrestial', u'Hydrology', u'Hazards', u'Infrastructure'):
+        for tag in (u'Weather', u'Oceans', u'Sea Ice', u'Snow', u'Terrestrial', u'Miscellaneous', u'Hydrology', u'Hazards', u'Webcams', u'Infrastructure'):
             data = {'name': tag, 'vocabulary_id': vocab['id']}
             toolkit.get_action('tag_create')(context, data)
 
@@ -31,17 +31,17 @@ class Nasa_AceDatasetPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm)
     plugins.implements(plugins.IDatasetForm)
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
-    plugins.implements(plugins.IFacets, inherit = True)    
-    
+    plugins.implements(plugins.IFacets, inherit = True)
+
 
     # IConfigurer
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
         #~ toolkit.add_public_directory(config_, 'public')
         #~ toolkit.add_resource('fanstatic', 'nasa_ace')
-    
+
     ## I Datasetform
-    
+
     # modify schema
     def _modify_package_schema(self, schema):
         #~ schema.update({
@@ -64,8 +64,8 @@ class Nasa_AceDatasetPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm)
     def update_package_schema(self):
         schema = super(Nasa_AceDatasetPlugin, self).update_package_schema()
         schema = self._modify_package_schema(schema)
-        return schema 
-        
+        return schema
+
     def show_package_schema(self):
         schema = super(Nasa_AceDatasetPlugin, self).show_package_schema()
         #~ schema.update({
@@ -80,7 +80,7 @@ class Nasa_AceDatasetPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm)
             })
         return schema
     # end modify schema
-        
+
     ## these next two functions are default dataset types
     def is_fallback(self):
         # Return True to register this plugin as the default handler for
@@ -95,17 +95,16 @@ class Nasa_AceDatasetPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm)
 
     def get_helpers(self):
         return {'dataset_types': dataset_types}
-        
-    
+
+
     def dataset_facets(self, facets_dict, package_type):
         if package_type != 'dataset':
             return facets_dict
-            
-        
-        new_facets = OrderedDict() 
+
+
+        new_facets = OrderedDict()
         ## called datasettypes in plugin but Categories where visiable
         new_facets['vocab_dataset_types'] = toolkit._('Categories')
         for f in facets_dict:
             new_facets[f] = facets_dict[f]
         return new_facets
-    
