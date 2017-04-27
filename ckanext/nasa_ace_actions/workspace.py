@@ -50,14 +50,23 @@ def user_update(context, data_dict=None, original_action=None):
     """
     if original_action is None:
         raise toolkit.ValidationError, "Original action not provideded"
+    #~ print original_action 
+    
+    # if the api key not provided then this update does not need to be 
+    # sent to the workspace as the apikey was not changed
+    try:
+
+        api_key = original_action['apikey']
+    except KeyError:
+        return 
         
     workspace_info = {
-        #~ 'id': original_action['id'],
-        'username': original_action['name'],
-        'name': original_action['display_name'],
-        'email': original_action['email'],
-        'apikey':original_action['apikey'],
-    }
+            #~ 'id': original_action['id'],
+            'username': original_action['name'],
+            'name': original_action['display_name'],
+            'email': original_action['email'],
+            'apikey': api_key,
+        }
     workspace_msg('update',  workspace_info)
     
 def user_delete(context, data_dict=None, original_action=None):
