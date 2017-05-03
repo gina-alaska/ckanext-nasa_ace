@@ -6,14 +6,3 @@
   {% resource 'nasa_ace/nasa_ace.css' %}
   {% resource 'nasa_ace/sorting.js' %}
 {% endblock %}
-
-{% block custom_styles %}
-  {{ super() }}
-  {% snippet 'snippets/cometchat-css.html' %}
-{% endblock %}
-
-{% block body_extras %}
-  {{ super() }}
-  {% snippet 'snippets/cometchat-js.html' %}
-{% endblock %}
-

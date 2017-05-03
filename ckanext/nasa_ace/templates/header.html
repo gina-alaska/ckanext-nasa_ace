@@ -69,6 +69,16 @@
               </li>
             {% endblock %}
             {% block header_account_log_out_link %}
+            <script type="text/javascript">
+              // Popup window code
+              function newPopup(url) {
+                popupWindow = window.open(url,'popUpWindow','height=425,width=355,top=50,left=100,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no,status=yes')
+              }
+              </script>
+              {# Only shows if a user is logged into CKAN #}
+              <li>
+                <a href="Javascript:newPopup('/chat')">Open Chat Pop-Up</a>
+              </li>
               <li>
                 <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}">
                   <i class="icon-signout" aria-hidden="true"></i>

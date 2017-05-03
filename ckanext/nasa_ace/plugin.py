@@ -2,6 +2,8 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
 from ckan.lib.plugins import DefaultTranslation
+import routes.mapper
+import ckan.lib.base as base
 
 
 class Nasa_AcePlugin(plugins.SingletonPlugin, DefaultTranslation):
@@ -15,10 +17,14 @@ class Nasa_AcePlugin(plugins.SingletonPlugin, DefaultTranslation):
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic', 'nasa_ace')
 
-        
-    #IRoutes
-    def before_map(self, m):
-        """redirect index to dataset """
-        m.redirect('/', '/dataset')
-        return m
 
+    #IRoutes
+    def before_map(self, route_map):
+        with routes.mapper.SubMapper(route_map, controller='ckanext.nasa_ace.plugin:NASAACEController') as m:
+                m.connect('chat', '/chat', action='chat')
+        route_map.redirect('/', '/dataset')
+        return route_map
+
+class NASAACEController(base.BaseController):
+        def chat(self):
+                return base.render('snippets/cometchat-embedded.html')
